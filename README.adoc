@@ -11,3 +11,7 @@ The HSC's charter can be found link:./charter.adoc[here].
 
 * Chair: Christoph Müllner
 * Co-Chair: Evandro Menezes
+
+An overview of the release dates of upstream projects
+related to our work can be found link:./releasedates.adoc[here].
+

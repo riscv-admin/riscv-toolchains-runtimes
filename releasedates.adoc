@@ -43,6 +43,13 @@ Upstream infos:
 * https://gcc.gnu.org/develop.html#timeline
 * https://ftp.gnu.org/gnu/gcc/?C=M;O=D
 
+RISC-V maintainers:
+
+* Andrew Waterman (SiFive)
+* Palmer Dabbelt (Google)
+* Jim Wilson (SiFive)
+* Kito Cheng (SiFive)
+
 == LLVM ==
 
 LLVM 9 schedule:
@@ -71,7 +78,12 @@ Upstream infos:
 * https://llvm.org/
 * https://releases.llvm.org/
 
+RISC-V maintainer:
+
+* Alex Bradbury (lowRISC)
+
 == Binutils ==
+
 *Rule of thumb:* Binutils (GNU linker, GNU assembler, tons of other excellent tools)
 releases twice per year (mid July and mid January).
 
@@ -92,3 +104,55 @@ Binutils 2.36 schedule:
 Upstream infos:
 
 * https://ftp.gnu.org/gnu/binutils/?C=M;O=D
+
+RISC-V maintainers:
+
+* Andrew Waterman (SiFive)
+* Palmer Dabbelt (Google)
+* Jim Wilson (SiFive)
+
+== Glibc ==
+
+*Rule of thumb:* Glibc releases twice per year (Febrary and August).
+
+Relases:
+
+* glibc 2.29 (2019-01-31)
+* glibc 2.30 (2019-08-01)
+* glibc 2.31 (2020-02-01)
+* glibc 2.32 (2020-08-05)
+* glibc 2.33 (2021-02-01)
+* glibc 2.34 (2021-08-01)
+
+Upstream infos:
+
+* https://www.gnu.org/software/libc/
+
+RISC-V maintainers:
+
+* Palmer Dabbelt (Google)
+* Andrew Waterman (SiFive)
+* DJ Delorie (Red Hat)
+* Darius Rad(Bluespec)
+
+== Newlib ==
+
+*Rule of thumb*: Newlib releases once per year.
+
+Releases:
+
+* Newlib 3.0.0 (2018-01-18)
+* Newlib 3.1.0 (2018-12-31)
+* Newlib 3.2.0 (2020-01-02)
+* Newlib 3.3.0 (2020-01-22)
+* Newlib 4.0.0 (2020-11-17)
+* Newlib 4.1.0 (2020-12-18)
+
+Upstream infos:
+
+* https://sourceware.org/newlib/
+
+RISC-V maintainer:
+
+* Kito Cheng (SiFive)
+

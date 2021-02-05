@@ -11,9 +11,6 @@ The HSC's charter can be found link:./charter.adoc[here].
 * Chair: Christoph Müllner
 * Co-Chair: Evandro Menezes
 
-An overview of the release dates of upstream projects
-related to our work can be found link:./releasedates.adoc[here].
-
 We are reporting to the RVI Software HC.
 
 Our reporting RVI groups:
@@ -29,6 +26,14 @@ Planned future groups:
 * SIG DB/App
 * SIG AI/ML/NLP
 * SIG HPC
+
+== Toolchain and Runtimes related information ==
+
+An overview of the release dates of upstream projects
+related to our work can be found link:./releasedates.adoc[here].
+
+The current status of RV extension support can be found
+link:./extension-support.adoc[here].
 
 = Links =
 

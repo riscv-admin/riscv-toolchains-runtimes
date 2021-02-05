@@ -1,0 +1,41 @@
+////
+SPDX-License-Identifier: CC-BY-4.0
+////
+
+= Charter of the RISC-V International Toolchains and Runtimes HSC
+:toc:
+
+Revision: 0.90
+
+== Scope
+
+The Toolchains and Runtimes HSC coordinates the evolution of the software development environment used to build the RISC-V software ecosystem.
+
+== Goals
+
+The HSC's main goals are:
+
+- Push RISC-V into open-source software
+- Pull developers to the RISC-V ecosystem
+- Advice on ISA extensions
+
+To achieve these goals the following steps are taken:
+
+- Advice on ISA extensions and ensure that all future ISA extensions to be driven by demonstrable/quantifiable benefits and possible support them in development tools
+- Identify and work with the key open-source projects for the RISC-V software ecosystem: compilers, debuggers, performance analysis tools, libraries implementing performance-primitives, and memory management libraries
+- Liaise between open-source compiler developers and RISC-V task groups defining ISA, profiling, and debug extensions
+- Reach out to developers and decision-makers to contribute to the RISC-V ecosystem
+- Promote RISC-V as an ISA to be used for research into novel compilation techniques
+- Track the support for RISC-V across development tools
+- Support benchmarking and work with benchmark organizations
+- Benchmark development tools for RISC-V and provide reporting to internal RISC-V committees on the relative progress of development tools targeting RISC-V
+- Provide access to the state-of-the-art development tools and compilation techniques for all RISC-V task groups by fostering an environment of cooperation between academia, open-source tool development, and the RISC-V ecosystem
+- Engage with new programming languages, programming paradigms, and development tool development towards the strategic goal of making RISC-V the prime choice (*"First on RISC-V"*) for innovation in development tools
+
+== Document history
+
+[cols="<1,<2,<3,<4",options="header,pagewidth",]
+|================================================================================
+| _Revision_ | _Date_            | _Author_          | _Modification_
+| 0.90       | 14 January 2021   | Christoph Müllner | Importing and adjusting initial version
+|================================================================================

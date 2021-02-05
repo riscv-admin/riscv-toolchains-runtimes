@@ -7,6 +7,7 @@ Christoph Müllner <https://github.com/cmuellner[@cmuellner]>
 :uri-license: {uri-rel-file-base}LICENSE
 
 This is the home of the RISC-V Toolchains and Runtimes HSC.
+The HSC's charter can be found link:./charter.adoc[here].
 
 * Chair: Christoph Müllner
 * Co-Chair: Evandro Menezes

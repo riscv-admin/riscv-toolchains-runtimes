@@ -3,7 +3,6 @@ SPDX-License-Identifier: CC-BY-4.0
 ////
 
 = Toolchains and Runtimes HSC
-Christoph Müllner <https://github.com/cmuellner[@cmuellner]>
 :uri-license: {uri-rel-file-base}LICENSE
 
 This is the home of the RISC-V Toolchains and Runtimes HSC.
@@ -14,4 +13,28 @@ The HSC's charter can be found link:./charter.adoc[here].
 
 An overview of the release dates of upstream projects
 related to our work can be found link:./releasedates.adoc[here].
+
+We are reporting to the RVI Software HC.
+
+Our reporting RVI groups:
+
+* TG Overlays
+* SIG Code Speed
+* TG psABI (in inception phase)
+* TG EABI
+* SIG Managed Runtimes (in inception phase)
+
+Planned future groups:
+
+* SIG DB/App
+* SIG AI/ML/NLP
+* SIG HPC
+
+= Links =
+
+* link:https://wiki.riscv.org/display/TECH/Tech+Home[RVI Tech Home]
+* link:https://github.com/riscv/riscv-elf-psabi-doc[psABI documentation]
+* link:https://github.com/riscv/riscv-platform-specs[RISC-V Platform Specification]
+* link:https://github.com/riscv/riscv-code-size-reduction[SIG Code Size GitHub page]
+* link:https://github.com/riscv/riscv-software-list[RISC-V Software List]
 

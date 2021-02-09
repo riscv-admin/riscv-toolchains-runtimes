@@ -42,4 +42,4 @@ link:./extension-support.adoc[here].
 * link:https://github.com/riscv/riscv-platform-specs[RISC-V Platform Specification]
 * link:https://github.com/riscv/riscv-code-size-reduction[SIG Code Size GitHub page]
 * link:https://github.com/riscv/riscv-software-list[RISC-V Software List]
-
+* link:https://godbolt.org[Compiler explorer]

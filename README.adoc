@@ -35,6 +35,9 @@ related to our work can be found link:./releasedates.adoc[here].
 The current status of RV extension support can be found
 link:./extension-support.adoc[here].
 
+LLVM holds biweekly sync-up link:https://lists.llvm.org/pipermail/llvm-dev/2019-September/135087.html[calls].
+Next link:https://lists.llvm.org/pipermail/llvm-dev/2021-February/148345.html[call] is scheduled for 18th Feb 2021.
+
 = Links =
 
 * link:https://wiki.riscv.org/display/TECH/Tech+Home[RVI Tech Home]

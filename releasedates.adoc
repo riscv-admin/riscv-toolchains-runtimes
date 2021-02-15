@@ -82,6 +82,20 @@ RISC-V maintainer:
 
 * Alex Bradbury (lowRISC)
 
+== GDB ==
+
+GDB major releases are approximately annually. There are typically one or two minor releases each year. This is the https://sourceware.org/gdb/schedule/[schedule]
+
+- major release branch/pre-release approximately 1 month before release
+- first minor release ("re-spin") approximately 3 months after major release.
+
+At time of writing the most recent release was 10.1, released on 2020-10-24. Dates for branching (and hence release) of GDB 11 have yet to be announced.
+
+RISC-V maintainers:
+
+* Andrew Burgess (Embecosm)
+* Palmer Dabbelt (Google)
+
 == Binutils ==
 
 *Rule of thumb:* Binutils (GNU linker, GNU assembler, tons of other excellent tools)
@@ -110,6 +124,7 @@ RISC-V maintainers:
 * Andrew Waterman (SiFive)
 * Palmer Dabbelt (Google)
 * Jim Wilson (SiFive)
+* Nelson Chu (SiFive)
 
 == Glibc ==
 
@@ -155,4 +170,3 @@ Upstream infos:
 RISC-V maintainer:
 
 * Kito Cheng (SiFive)
-

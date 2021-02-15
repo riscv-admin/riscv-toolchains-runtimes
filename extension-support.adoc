@@ -21,6 +21,19 @@ in publicly available RISC-V toolchains.
 | Cryptographic extensions   |
 |==============================================
 
+== GDB ==
+
+[width="60%",options="header"]
+|==============================================
+| Extension                  | Status
+| Bit Manipulation           |
+| Vector Extension           |
+| J Extension                |
+| P Extension                |
+| Zefinx                     |
+| Cryptographic extensions   |
+|==============================================
+
 == GCC ==
 
 [width="60%",options="header"]

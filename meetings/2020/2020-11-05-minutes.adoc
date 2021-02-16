@@ -1,0 +1,71 @@
+////
+SPDX-License-Identifier: CC-BY-4.0
+////
+
+:leveloffset: 1
+= RVI Toolchain & Runtimes TS Meeting
+
+Thursday, Nov 5, 2020
+
+== Introduction
+
+== Review of charter
+
+*  Jeremy: Charter is quite wide and we might not be able to address all at once
+*  Jeremy: Shorten/summarize the charter
+*  Jeremy: Promote a commercial ecosystem as part of the charter
+*  Mark: Prioritize the charter lists
+*  Mark: Enable members to make money from RISC-V
+*  Marc: Create three main points and a fourth point: talking about the commercial aspects
+*  Evandro: How to address commercial aspects?
+*  Marc: We need a way to make RISC-V attractive for big companies (e.g. Red Hat)
+*  Mark: We have people already on board (Embecosm, Mentor, etc.). What we can do is to
+**  educate people about what we do, and
+**  do a gap analysis and deliver solutions there
+* Philipp: ISV outreach is trying to address the commercial aspects
+* Philipp: Regarding the wide agenda, the plan is to have TGs/SIGs with a more narrow focus
+
+== Role of a TS within RISC-V international
+
+== Priorities
+
+* Bringing existing task-groups under the Technical Subcommittee
+
+* Bridging the "Java gap"
+** OpenJDK port is needed
+** CAS is working on that
+* Coordinate JavaScript V8 efforts
+** Two groups were working on a RISC-V port -> we should avoid that in the future
+* Support a more quantitative approach to ISA extensions
+
+* Mark: Who is the user, how can they use it?
+** Look at SW as a horizontal: SW needs to make a sign-off
+** SW has authority to spawn SIGs
+* Marc: How to deal with external extensions (e.g. an external bit-manip extension that a vendor wants to standardize that)?
+** Jeremey: We should be attractive vendor-specific extensions.
+** Mark: Fully agrees, but we should avoid duplication.
+** Evandro: Bring vendors together if they do similar things.
+** Mark: We should encourage vendors to do that.
+
+* Discussion about the actual Alibaba's bit-manip extension and the GCC patches to support that
+** General discussion on how to deal with such extensions.
+** Comments from Mark
+*** We need to provide room for vendor-specific extensions
+*** We should encourage vendors to share their extensions
+*** We need to lead the community to share and work together
+
+== Formation of a Managed Runtimes TG
+
+* skipped, because we ran out of time
+
+== Open discussion
+
+* Fortran support for HPC
+** Marc: There is a need for Fortran support for HPC people
+** Wei: Fortran support is already in the LLVM metal repo (flang)
+
+* V8 port of CAS
+** Wei: Brice Dobry is working on the V8 port
+** Brice: Working with Google in fixing the latest bugs before mainlining. At the moment it is in the review process.
+** Wei: Target is to get the port into V8 8.9 or 8.10.
+

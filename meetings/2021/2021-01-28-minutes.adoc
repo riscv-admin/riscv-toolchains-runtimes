@@ -1,0 +1,60 @@
+////
+SPDX-License-Identifier: CC-BY-4.0
+////
+
+:leveloffset: 1
+= RVI Toolchain & Runtimes HSC Meeting
+
+Thursday, January 28, 2021
+
+== Introduction
+
+== psABI TG and Managed Runtime SIG: current status
+
+* Christoph reports the status of the TG creation:
+** Interviews in progress
+** Working on formal steps of the inception phase as defined in Groups, Chair and Vice-Chair Approval Policy
+*** description and preliminary charter (incl. deliverables) in an internal review
+*** formal email of open positions in preparation
+*** decision and forwarding to TSC for approval: end of next week
+**Link to psABI repo: https://github.com/riscv/riscv-elf-psabi-doc/blob/master/riscv-elf.md
+
+== Proposal to move T&R meeting time to 07:00 Pacific Time
+
+* Rationale
+** Much of our current activity is currently being carried out by PLCT lab at the Chinese Academy of Sciences.
+*** It is very hard for them to have a fortnightly meeting that starts at 01:00.
+*** The current start time is also outside the working day for groups in mainland and eastern Europe.
+* Status
+** Attempted to do a doodle, let's see the options:
+*** Let's aim for 7 am (Pacific Time)
+**** Mon: code speed, profiles and platform spec
+**** Tue: Code size
+**** Wed: Chairs
+**** Thu: EABI, SIG HPC, RASD
+**** Fri: Friday evening is not an option
+** Proposal
+*** Currently we use these time slots for SIG code speed and SIG code size
+**** code speed: Mon 7 am
+**** code size: Tue 7 am
+**** use the opening slot for T&R
+
+== Policy on tool chain acceptance criteria [15 min]
+
+* proposed by Tariq Kurd and Jeremy Bennett
+* Already reviewed by code size reduction TC
+* See https://docs.google.com/document/d/1Eio39QTHNM9Lmi1VXoH7PYLgBGUscvpdPxB6YmZonVk
+* Currenlty working on LLVM version (see discussion on list)
+* Policy was accepted without any countervote
+
+== Report from SSC
+
+* Philipp provides an update of the Performance Analysis and Performance Modelling
+
+== Open topics
+
+* Christoph: How to get people being more active
+** Current participation not very high
+** How to get people bringing topics into this meeting
+*** News, status reports, policy, next steps, status, what's missing
+

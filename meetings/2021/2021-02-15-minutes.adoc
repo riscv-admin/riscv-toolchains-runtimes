@@ -1,0 +1,119 @@
+////
+SPDX-License-Identifier: CC-BY-4.0
+////
+
+:leveloffset: 1
+= RVI Toolchain & Runtimes HSC Meeting
+
+Thursday, February 15, 2021
+
+== Introduction
+
+== New meeting time slot
+
+* Meeting time has moved
+** New schedule: biweekly, Thursday, 7 am (PT)
+** New schedule starts on Feb 15 (day of this meeting)
+** Tech cal is updated accordingly
+
+== psABI TG: current status
+
+* Christoph reports the status of the TG creation:
+** Candidates have applied
+** Interviews were held
+** Still open for applications until Feb 16 (application window of two weeks)
+** Afterwards nominees will be forwarded to TSC
+*** Nominees (incl. affiliation)
+*** Bio
+*** Preliminary charter
+*** Required skills for applicants
+*** Goals as expressed by the nominees
+*** Deliverable
+*** [If possible senior chair in combination with junior co-chair]
+
+== T&R github repo
+
+* Christoph introduces the T&R github repo
+** Structural overview of location within RVI
+** Current contents
+*** Release dates of T&R related projects
+*** RISC-V implementation status of GCC, LLVM
+** Call for suggestions and ideas for additional contents
+** Responses from all participants
+*** Tracking status of:
+**** GDB
+**** OpenOCD
+**** golang
+**** Rust
+**** V8/nodejs
+**** OpenJDK
+* Christoph mentions, that PR are welcome
+* Mark suggests to split the list into a primary and a seconday list
+
+== Release dates
+
+* Christoph mentions the release dates page in the T&R github
+  https://github.com/riscv/riscv-toolchains-runtimes/blob/master/releasedates.adoc
+* GCC (rule of thumb: GCC closes the merge window for the next release in mid November)
+* LLVM
+* Binutils (rule of thumb: releases twice per year (mid July and mid January))
+* Glibc (rule of thumb: Glibc releases twice per year (February and August))
+* Newlib (rule of thumb: newlib releases once per year)
+
+== GCC/LLVM sync-up calls
+
+* There are two RISC-V calls, which are non-RVI events, but which are RISC-V centric:
+** GCC RISC-V community meeting (Mar 11, 2021)
+*** Schedule: biweekly, Thursday 7 am (PST), starting on Mar 11, 2021
+*** Next meeting: Mar 11, 2021 at 7 am (PST)
+*** Organized by Wei Wu (PLCT)
+*** Public announcement: https://www.mail-archive.com/gcc@gcc.gnu.org/msg94197.html
+** LLVM RISC-V
+*** Schedule: biweekly, Thursday 8 am (PST), since Sept 2019
+*** Next meeting: Feb 18, 2021 at 8 am (PST)
+*** Organized by Alex Bradbury (lowRISC) and Ana Pazos (Qualcomm)
+*** Public announcement: https://lists.llvm.org/pipermail/llvm-dev/2021-February/148345.html
+
+The T&R HSC chairs are planning to attend both calls on a regular basis.
+The T&R HSC chairs are also the bridges to both communities.
+
+* Mark: this events should be forwarded to Kim
+
+== Extension support status
+
+* We want to give an overview of the extension support status in GCC/LLVM
+** Currently WIP
+   https://github.com/riscv/riscv-toolchains-runtimes/blob/master/extension-support.adoc
+** PRs are welcome, but also direct mail, etc.
+** Goal: we want to provide an overview, so that we have a common understanding of the status
+
+== Compiler explorer
+
+* Christoph presents a quick overview of compiler explorer
+* Interactive compiler
+** Accepts C, C++ , Rust, Go, D, Haskell, Swift, Pascal, etc. (depending on the toolchain)
+** RISC-V support since June 2018 (thanks Palmer Dabbelt)
+** godbold.org (working frontend)
+** https://github.com/compiler-explorer/compiler-explorer (sources)
+** Support for GCC, LLVM
+* Was stuck on GCC 8.2.0
+** We fixed that last week: GCC 10.2.0 is now available as well
+** riscv32 (rv32gc with ABI ilp32d) and riscv64 (rv64gc with ABI lp64d)
+* Why using it?
+** Nice tool to see generated code using different compilers
+** See influence of compiler flags (-O3, -Ofast, -mtune=???)
+** Compare hand-written assembly against compiler output
+
+== V8
+
+* Wei Wu and his team present the status of the V8 RISC-V port
+* https://github.com/v8-riscv/v8/wiki
+* 2021 V8 RISCV Roadmap-Items lists with priority from high to low
+  https://github.com/v8-riscv/v8/issues/366#issuecomment-756183363
+* Supported/tested systems
+** HiFive Unleashed board
+** QEMU
+** x86 via simulated v8-riscv build
+
+== Open topics
+

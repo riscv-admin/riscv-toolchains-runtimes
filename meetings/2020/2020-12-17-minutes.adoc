@@ -1,0 +1,52 @@
+////
+SPDX-License-Identifier: CC-BY-4.0
+////
+
+:leveloffset: 1
+= RVI Toolchain & Runtimes HSC Meeting
+
+Thursday, Dec 17, 2020
+
+== Introduction
+
+== uMON monitor code (Marc Karasek - InspireSemi)
+
+* Marc gives an overview about the tool and its potential use-cases.
+* Marc would be happy to get contributions from the community.
+
+== SIG code speed charter approval discussion
+
+* Jeremy is presenting the charter
+* Evandro says that the wording of the goals can be interpreted as if non-commercial
+  players are not welcome (by targeting exclusively and explicitly commerial players).
+  He proposes to change the wording to explicitly mention non-commercial players as well,
+  as the currently carry a lot of work.
+* Jeremy agrees and states, that non-commercial players are not intentionally excluded,
+  but wants to push harder to get commercial players onboard.
+* Mark states we need to support both. He proposes to work on the wording.
+* Follow-up discussion about goals of a SIG.
+* Discussion interrupted because of time constaints
+
+== psABI/UABI TG & EABI TG: current status
+
+* Christoph provides the current status
+** This TG needs to be up and running asap
+** Potential chairs have just been collected
+** Individual calls with the potential chairs will be held according to availability
+   of involved people (most likely in early January)
+* Philipp asks about the recent renaming from psABI to UABI
+  and if that was also a change of the scope of the TG
+* Jim describes the origins of the terms
+** Mark asks for somebody to come up with a proposal
+* * Evandro will work on that.
+
+== Policy for vendor-specific toolchain extensions
+
+* Christoph mentions the vendor-specific toolchain extension policy proposals on the mailing list.
+* Christoph would like to see in a policy the resolution process in case of a future conflict
+* Jeremy presents his proposal
+* Lively discussion, where Mark states "whatever you decide, make it documented"
+* Philipp raises concerns about the impact to generic platforms (Linux distros)
+  
+== Open topics
+

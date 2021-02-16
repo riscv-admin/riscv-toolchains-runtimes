@@ -1,0 +1,11 @@
+////
+SPDX-License-Identifier: CC-BY-4.0
+////
+
+= Toolchains and Runtimes HSC meetings
+
+The Toolchains and Runtimes HSC meets biweekly.
+Current schedule is Monday, 7 am (PT) starting on Feb 15, 2021.
+
+Meeting minutes can be found in the subdirectories.
+

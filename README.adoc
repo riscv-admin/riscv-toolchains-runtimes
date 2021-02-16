@@ -27,7 +27,12 @@ Planned future groups:
 * SIG AI/ML/NLP
 * SIG HPC
 
-== Toolchain and Runtimes related information ==
+== Regular meetings
+
+The Toolchain and Runtimes HSC meets bi-weekly.
+For more info see link:./meetings/README.adoc[here].
+
+== Toolchain and Runtimes related information
 
 An overview of the release dates of upstream projects
 related to our work can be found link:./releasedates.adoc[here].
@@ -38,7 +43,7 @@ link:./extension-support.adoc[here].
 LLVM holds biweekly sync-up link:https://lists.llvm.org/pipermail/llvm-dev/2019-September/135087.html[calls].
 Next link:https://lists.llvm.org/pipermail/llvm-dev/2021-February/148345.html[call] is scheduled for 18th Feb 2021.
 
-= Links =
+= Links
 
 * link:https://wiki.riscv.org/display/TECH/Tech+Home[RVI Tech Home]
 * link:https://github.com/riscv/riscv-elf-psabi-doc[psABI documentation]

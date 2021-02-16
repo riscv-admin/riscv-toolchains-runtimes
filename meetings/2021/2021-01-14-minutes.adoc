@@ -1,0 +1,78 @@
+////
+SPDX-License-Identifier: CC-BY-4.0
+////
+
+:leveloffset: 1
+= RVI Toolchain & Runtimes HSC Meeting
+
+Thursday, January 14, 2021
+
+== Introduction
+
+== psABI TG: current status
+
+* Christoph reports the status of the TG creation:
+** Interviews in progress
+** Working on formal steps of the inception phase as defined in Groups, Chair and Vice-Chair Approval Policy
+*** description and preliminary charter (incl. deliverables) in an internal review
+*** formal email of open positions in preparation
+*** decision and forwarding to TSC for approval: end of next week
+**Link to psABI repo: https://github.com/riscv/riscv-elf-psabi-doc/blob/master/riscv-elf.md
+
+* Mark summarizes the policy and its purpose and states, that he is open to recommendations in order to make it more understandable:
+  https://docs.google.com/document/d/14ZpciYwIzmuiB92_hKfwTAttTnc3rsLbWI-CpC7MdC8/edit?pli=1
+
+== Managed Runtime TG: current status
+
+* Christoph reports the status of the TG creation:
+** Interviews in coordination
+*** Working on formal steps of the inception phase as defined in Groups, Chair and Vice-Chair Approval Policy
+*** description and preliminary charter (incl. deliverables) in an internal review
+*** formal email of open positions in preparation
+*** decision and forwarding to TSC for approval: end of next week
+* Discussion about splitting this TG from the beginning (on the mailing list)
+** We agreed to not follow this idea
+
+* Jeremey asks if, given the number of runtimes managed by this TG, it should not better be a SIG.
+** Philipp: mentions, that there were discussions about that already, and that the decision was to go for a TG.
+
+== Updates from SW projects
+
+* Wei reports the status of V8 and OpenJDK
+** OpenJDK: RISCV64G port in OpenJDK11
+*** Bugfixes
+*** Working on upstreaming
+*** PLCT will implement TV32G port in 2021
+** V8: Upstreaming; Improving code speed; Vector
+*** Rebased, Upstreaming work
+*** Defined new roadmap for 2021: optimization, nodejs, WASM
+
+* Phil asks Mark to provide an overview of the new structure
+https://docs.google.com/presentation/d/1eEVuu6lRZd9iiDnZQSZME7Q7svtTG3pGIKHPmZ79B8E/edit#slide=id.p1
+
+== Policy on GNU tool chain acceptance criteria (Tariq and Jeremy)
+
+* Tariq and Jeremy present their proposal for a Policy on GNU tool chain acceptance criteria
+  https://docs.google.com/document/d/1Eio39QTHNM9Lmi1VXoH7PYLgBGUscvpdPxB6YmZonVk
+* There are a couple of questions and requests for a review period
+* Tariq will put the document on the T&R list for review (2 weeks)
+
+== Proposal to move T&R meeting time to 07:00 Pacific Time (15:00 UTC)
+
+* Rationale:
+** much of our current activity is currently being carried out by PLCT lab at the Chinese Academy of Sciences
+** It is very hard for them to have a fortnightly meeting that starts at 01:00
+** The current start time is also outside the working day for groups in mainland and eastern Europe
+** 7:00 am Pacific Time = 15:00 UTC = 23:00 China Time
+** The idea to move to a different time slot is appreciated
+** However, there is not common time found, where this talk can be held
+** Christoph will create a Doodle (or find a better way) to find a better time slot
+
+== Proposal of the Performance Tracking System (PTS) and a new TG for it
+
+* Wei presents his proposal for a PTS and how a TG could maintain that
+  https://github.com/riscv/riscv-code-speed-optimization/blob/main/projects/infrastructure-for-perf-tracking.adoc
+  https://docs.google.com/presentation/d/1qnfq586siCe-jNoA938cABYiaEBZ0tTyuyqDCKxrW04/edit?usp=sharing
+* Mark mentions, that there is a TG starting up, which aims to keep track of any kind of performance regressions. He suggests, that the infrastructure could be shared.
+* Jeremy mentions, that this TG would make the output of SIG code speed more visible.
+

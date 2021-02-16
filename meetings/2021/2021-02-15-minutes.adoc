@@ -115,5 +115,12 @@ The T&R HSC chairs are also the bridges to both communities.
 ** QEMU
 ** x86 via simulated v8-riscv build
 
+== Overlay TG: call for comments
+
+* The overlay TG has prepared as standard
+  https://github.com/riscv/riscv-overlay/blob/master/docs/riscv-overlay-software-standard-draft.adoc
+* Ofer is providing a quick introduction
+* Please review and provide your comments
+
 == Open topics
 

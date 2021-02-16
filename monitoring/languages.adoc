@@ -1,0 +1,82 @@
+////
+SPDX-License-Identifier: CC-BY-4.0
+////
+
+= Monitoring of upstream projects (language set)
+:toc:
+
+This page gives an overview of upstream projects.
+If you miss information or find mistakes, please file a PR.
+
+== GHC
+
+The Glasgow Haskell Compiler (GHC) is an open-source
+compiler for the programming language Haskell.
+
+* https://www.haskell.org/ghc/[GHC homepage]
+
+== Go
+
+Go is a programming language designed for simplicity,
+reliability and efficiency.
+
+* https://golang.org/[Go Homepage]
+
+== OpenJDK
+
+OpenJDK is an open-source implementation of the Java Platform (Java SE).
+
+* https://openjdk.java.net/projects/jdk/[OpenJDK Homepage]
+* https://github.com/openjdk/jdk[OpenJDK github repository]
+
+=== RISC-V status
+
+Two independent teams started working on the OpenJDK port.
+
+The BishengJDK team is lead by Yadong Wang.
+They have published the first HotSpot JIT port for RV64G.
+
+The PLCT team is lead by Ningning Shi.
+
+Both teams are collaborating and working on a common
+link:https://github.com/openjdk-riscv/[RISC-V port].
+
+The status of OpenJDK/HotSport RV64G JIT porting could be found
+link:https://groups.google.com/a/groups.riscv.org/g/sw-dev/c/HziqjQ_2o2w[here].
+They are very optimistic to reach their 100x speed up
+link:https://groups.google.com/a/groups.riscv.org/g/sw-dev/c/fIYoDnpqww8[goal].
+
+== PHP
+
+PHP is a programming language targeting web development.
+
+* https://www.php.net/[PHP homepage]
+
+== Rust
+
+Rust is a programming language designed for performance,
+reliability and productivity.
+
+* https://www.rust-lang.org/[Rust Homepage]
+
+== V8
+
+V8 is a JavaScript and WebAssembly engine with a strong
+focus on performance.
+
+V8 is used a JavaScript runtime for other runtimes/projects, such as
+
+* Google Chrome Browser
+* Chromium Browser
+* Node.js
+
+=== RISC-V status
+
+PLCT is working on the link:https://github.com/v8-riscv/v8/[RISC-V port].
+The team is lead by Peng Wu.
+She and her team have managed to get their RV64GCV port
+link:https://bugs.chromium.org/p/v8/issues/detail?id=10991#c23[mainline]
+in February 2021.
+The project's 2021 roadmap can be found
+link:https://github.com/v8-riscv/v8/issues/366#issuecomment-756183363[here].
+

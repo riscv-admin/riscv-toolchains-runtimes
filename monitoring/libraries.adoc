@@ -1,0 +1,38 @@
+////
+SPDX-License-Identifier: CC-BY-4.0
+////
+
+= Monitoring of upstream projects (libraries set)
+:toc:
+
+This page gives an overview of upstream projects.
+If you miss information or find mistakes, please file a PR.
+
+== gperftools
+
+gperftools provides a heap library (tcmalloc) optimized
+for multi-threaded applications and a heap-profiler.
+
+* https://google.github.io/tcmalloc/gperftools.html[gperftools Homepage]
+* https://github.com/gperftools/gperftools[gperftools git repository]
+
+== jemalloc
+
+jemalloc a heap library optimized for performance.
+
+* http://jemalloc.net/[jemalloc Homepage]
+* https://github.com/jemalloc[jemalloc git repository]
+
+== OpenSSL
+
+OpenSSL is cryptographic library, which brings its own
+implementation of the TLS protocol.
+Additionally it also includes an implementation of cryptographic
+algorithms (symmetric ciphers, asymmetric ciphers, hash digests,
+key derivation, etc.).
+
+* https://www.openssl.org/[OpenSSL Homepage]
+* https://github.com/openssl/openssl[OpenSSL git repository]
+
+
+

@@ -1,0 +1,32 @@
+////
+SPDX-License-Identifier: CC-BY-4.0
+////
+
+= Monitoring RISC-V status of external projects
+
+Currently the following toolchain projects are monitored:
+
+* link:./toolchain.adoc#binutils[Binutils]
+* link:./toolchain.adoc#gcc[GCC]
+* link:./toolchain.adoc#gdb[GDB]
+* link:./toolchain.adoc#glibc[Glibc]
+* link:./toolchain.adoc#llvm[LLVM]
+* link:./toolchain.adoc#newlib[Newlib]
+
+The following language runtimes are currently monitored:
+
+* link:./language.adoc#v8[V8]
+* link:./language.adoc#openjdk[OpenJDK]
+
+The following projects are planned for future monitoring:
+
+* link:./language.adoc#ghc[GHC]
+* link:./language.adoc#go[Go]
+* link:./language.adoc#rust[Rust]
+* link:./language.adoc#php[PHP]
+* link:./libraries.adoc#gperftools[gperftools/tcmalloc]
+* link:./libraries.adoc#jemalloc[jemalloc]
+* link:./libraries.adoc#openssl[OpenSSL]
+* link:./tools.adoc#openocd[OpenOCD]
+* link:./tools.adoc#valgrind[Valgrind]
+

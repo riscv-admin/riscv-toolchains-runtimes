@@ -36,32 +36,7 @@ For more info see link:./meetings/README.adoc[here].
 
 The Toolchain and Runtimes HSC is monitoring
 the RISC-V status of a range of external projects.
-
-Currently the following toolchain projects are monitored:
-
-* link:./monitoring/toolchain.adoc#binutils[Binutils]
-* link:./monitoring/toolchain.adoc#gcc[GCC]
-* link:./monitoring/toolchain.adoc#gdb[GDB]
-* link:./monitoring/toolchain.adoc#glibc[Glibc]
-* link:./monitoring/toolchain.adoc#llvm[LLVM]
-* link:./monitoring/toolchain.adoc#newlib[Newlib]
-
-The following language runtimes are currently monitored:
-
-* link:./monitoring/language.adoc#v8[V8]
-* link:./monitoring/language.adoc#openjdk[OpenJDK]
-
-The following projects are planned for future monitoring:
-
-* link:./monitoring/language.adoc#ghc[GHC]
-* link:./monitoring/language.adoc#go[Go]
-* link:./monitoring/language.adoc#rust[Rust]
-* link:./monitoring/language.adoc#php[PHP]
-* link:./monitoring/libraries.adoc#gperftools[gperftools/tcmalloc]
-* link:./monitoring/libraries.adoc#jemalloc[jemalloc]
-* link:./monitoring/libraries.adoc#openssl[OpenSSL]
-* link:./monitoring/tools.adoc#openocd[OpenOCD]
-* link:./monitoring/tools.adoc#valgrind[Valgrind]
+For more info see link:./monitoring/README.adoc[here].
 
 = Links
 

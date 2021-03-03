@@ -38,6 +38,14 @@ The Toolchain and Runtimes HSC is monitoring
 the RISC-V status of a range of external projects.
 For more info see link:./monitoring/README.adoc[here].
 
+== CI service for GNU toolchain
+
+A CI service for several RISC-V GNU toolchain flavours can be found
+link:https://ci.rvperf.org/view/GNU/[here].
+
+This service is maintained by Wei Wu (PLCT).
+Suggestions are discussed link:https://github.com/riscv/riscv-gnu-toolchain/issues/847[here].
+
 = Links
 
 * link:https://wiki.riscv.org/display/TECH/Tech+Home[RVI Tech Home]

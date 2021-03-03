@@ -17,6 +17,20 @@ and boundary-scan testing.
 * http://openocd.org/[OpenOCD Homepage]
 * https://sourceforge.net/p/openocd/code/ci/master/tree/[OpenOCD source code]
 
+=== RISC-V status
+
+Tim Newsom (SiFive) is maintaining a RISC-V port, which is mainly
+tested with SiFive cores.
+
+Lack of time and review starvation led to a big amount of patches,
+which are not mainlined yet.
+
+Tim is welcoming pull requests for new features, cleanups, etc.
+
+The port can be found here:
+
+* https://github.com/riscv/riscv-openocd
+
 == Valgrind
 
 Valgrind is an instrumentation framework for dynamic analysis tools.

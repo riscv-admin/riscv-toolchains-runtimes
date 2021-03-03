@@ -1,0 +1,69 @@
+////
+SPDX-License-Identifier: CC-BY-4.0
+////
+
+:leveloffset: 1
+= RVI Toolchain & Runtimes HSC Meeting
+
+Monday, March 1, 2021
+
+== Introduction
+
+* Christoph promotes the T&R github repository
+* Christoph reminds of the GCC/LLVM sync-up calls
+* Christoph provides the status of the psABI TG
+
+== CFP for Development Tools and Tool Chains
+
+* Christoph describes the publicly known details
+* Open discussion for finding potential topics and presentors
+* This will be continued offline (deadline for CFP is Saturday, Mar 6)
+
+== RFC: Cryptographic Extensions TG's Proposed Krypto Intrinsics
+
+* Request from the Crypto Ext TG for comments on intrinsics of their scalar krypto extension
+* We've agreed to provide feedback within 7 days
+* Philipp suggest to do this offline
+
+== ELF flag conventions for extenions
+
+* Mark has asked to put this on the agenda
+* As this topics falls into the scope of the psABI TG,
+  it will be documented and handled there.
+* Currenlty there are no other documentation attempts for this topic.
+* It is stated, that this topic will need supervision in case the new chairs
+  will be blocked by the huge amount of backlog.
+
+== Branch Management for GNU Toolchain
+
+* There is a proposal from Kito for branch management of the GNU toolchain
+* Affects mainly GCC, binutils and glibc
+* On the corresponding T&R thread there is wide acceptance for his proposal #3
+** Accept non-draft unratified extensions on master
+*** Guarded with -menable-experimental-extensions
+*** And must using explicitly version in -march string
+    e.g. -march=rv64gcv is not accept, must be -march=rv64gcv0p9
+** One extra branch for all draft unratified.
+** Pros
+*** Only master branch and one extra branch
+*** Unratified extension available on master
+** Cons
+*** Still need some effort when draft becomes non-draft
+* Palmer Dabbelt raised some concerns, we will discuss with him
+* Next steps:
+** Create policy document
+** Reach out to binutils/gdb (glibc, LLVM) maintainers
+*** Explain why it is needed and ask for acceptance
+** Define branch location for draft unratified extensions
+*** Proposal: GCC RISC-V vendor branch
+*** PLCT lab offered to maintain this branches (contact: Wei Wu)
+
+== CI service for RISC-V community
+
+* Jenkins instance on https://ci.rvperf.org/
+* E.g. Zfinx rv64gc toolchain
+** https://ci.rvperf.org/job/plct-gnu-zfinx-rv64gc/
+* Contact: Wei Wu
+
+== Open topics
+

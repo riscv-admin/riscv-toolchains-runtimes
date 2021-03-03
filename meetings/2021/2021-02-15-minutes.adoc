@@ -5,7 +5,7 @@ SPDX-License-Identifier: CC-BY-4.0
 :leveloffset: 1
 = RVI Toolchain & Runtimes HSC Meeting
 
-Thursday, February 15, 2021
+Monday, February 15, 2021
 
 == Introduction
 

@@ -15,15 +15,15 @@ Currently the following toolchain projects are monitored:
 
 The following language runtimes are currently monitored:
 
-* link:./language.adoc#v8[V8]
-* link:./language.adoc#openjdk[OpenJDK]
+* link:./languages.adoc#v8[V8]
+* link:./languages.adoc#openjdk[OpenJDK]
 
 The following projects are planned for future monitoring:
 
-* link:./language.adoc#ghc[GHC]
-* link:./language.adoc#go[Go]
-* link:./language.adoc#rust[Rust]
-* link:./language.adoc#php[PHP]
+* link:./languages.adoc#ghc[GHC]
+* link:./languages.adoc#go[Go]
+* link:./languages.adoc#rust[Rust]
+* link:./languages.adoc#php[PHP]
 * link:./libraries.adoc#gperftools[gperftools/tcmalloc]
 * link:./libraries.adoc#jemalloc[jemalloc]
 * link:./libraries.adoc#openssl[OpenSSL]

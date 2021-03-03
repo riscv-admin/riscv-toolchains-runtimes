@@ -15,12 +15,23 @@ compiler for the programming language Haskell.
 
 * https://www.haskell.org/ghc/[GHC homepage]
 
+=== RISC-V status
+
+GHC does not support RISC-V, but there are people working on it.
+The porting attempts are tracked here:
+
+* https://gitlab.haskell.org/ghc/ghc/-/issues/16783
+
 == Go
 
 Go is a programming language designed for simplicity,
 reliability and efficiency.
 
 * https://golang.org/[Go Homepage]
+
+=== RISC-V status
+
+RISC-V support has been mainlined with Go 1.14.
 
 == OpenJDK
 
@@ -52,12 +63,28 @@ PHP is a programming language targeting web development.
 
 * https://www.php.net/[PHP homepage]
 
+=== RISC-V status
+
+The PHP interpreter works on RISC-V.
+However, certain features, such as the PCRE JIT, are not ported yet
+and there are no RISC-V specific optimization in the code base at the moment.
+Thus optimal perfomance cannot be achieved right now.
+
 == Rust
 
 Rust is a programming language designed for performance,
 reliability and productivity.
+It relies on LLVM for generating code.
 
 * https://www.rust-lang.org/[Rust Homepage]
+
+=== RISC-V status
+
+Rust has tier 2 support for RISC-V RV64 (riscv64gc-unknown-linux-gnu)
+since 1.42.0 (2020-03-12).
+RV32 is supported, but currenlty does not have a complete standard library.
+
+* https://doc.rust-lang.org/nightly/rustc/platform-support.html
 
 == V8
 

@@ -17,15 +17,15 @@ Our reporting RVI groups:
 
 * TG Overlays
 * SIG Code Speed
-* TG psABI (in inception phase)
-* TG EABI
+* TG psABI
+* TG EABI (dotted line)
 * SIG Managed Runtimes (in inception phase)
+* SIG HPC
 
 Planned future groups:
 
 * SIG DB/App
 * SIG AI/ML/NLP
-* SIG HPC
 
 == Regular meetings
 

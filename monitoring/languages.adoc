@@ -77,6 +77,7 @@ reliability and productivity.
 It relies on LLVM for generating code.
 
 * https://www.rust-lang.org/[Rust Homepage]
+* https://doc.rust-lang.org/book/[Rust Book]
 
 === RISC-V status
 
@@ -85,6 +86,33 @@ since 1.42.0 (2020-03-12).
 RV32 is supported, but currenlty does not have a complete standard library.
 
 * https://doc.rust-lang.org/nightly/rustc/platform-support.html
+
+== Rust Embedded
+
+Rust Embedded is a project for enabling the Rust Programming Language
+on "Bare Metal" embedded systems.
+
+* https://github.com/rust-embedded/wg[Rust Embedded Working Group]
+* https://docs.rust-embedded.org/book/[Embedded Rust Book]
+
+=== RISC-V status
+
+Since Embedded Rust does not require Rust's standard library (no_std),
+more RISC-V platforms are available than for a full Rust runtime.
+
+The following platforms are supported:
+
+* Bare RISC-V RV32
+** RV32I
+** RV32IMAC
+** RV32IMC
+* Bare RISC-V RV64
+** RV64IMAFDC
+** RV64IMAC
+
+There is also a quickstart guide to build Rust applications for HiFive1 boards:
+
+* https://github.com/riscv-rust/riscv-rust-quickstart
 
 == V8
 

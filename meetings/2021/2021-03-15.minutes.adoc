@@ -1,0 +1,62 @@
+////
+SPDX-License-Identifier: CC-BY-4.0
+////
+
+:leveloffset: 1
+= RVI Toolchain & Runtimes HSC Meeting
+
+Monday, March 15, 2021
+
+== Introduction
+
+* Christoph promotes the T&R github repository
+
+== GCC sync-up calls
+
+* Christoph gives a quick overview of the last GCC sync-up call
+
+== LLVM sync-up calls
+
+* Christoph gives a quick overview of the last LLVM sync-up call
+
+== psABI TG
+
+* Kito gives an overview of the ongoing tasks
+** Want to do monthly meeting
+** All open PRs and open issues have been reviewed
+** Created new issues
+** Working on policy for adding new content
+* Mark: abstract requirements for adding new extension support
+  E.g. OS should have enough information to know if the ELF is executable
+  Could be named "ELF header policy"
+* Mark: interaction/coordination with other groups?
+  Kito: will reach out to other TGs
+* Mark: what about other EABIs? Will there be an overall document?
+  Kito: We did not reach out to EABI TG yet.
+
+== psABI-releated topics
+
+* Kito names a list of psABI-related repos under riscv/*
+* Some don't look maintained
+* Question: what to do? i.e who will be responsible
+* Christoph and Kito will work out a plan
+
+== Branch Management for GNU Toolchain
+
+* Kito and Christoph have prepared a policy
+* Feedback is welcome
+* Policy will be proposed in the next GCC sync-up call by Kito
+
+== CI/Testing
+
+* Attempts from RVI to build up a CI/Testing infrastructure
+* Efforts driven by John Leidel and Wei Wu
+* Collecting requirements/ideas
+* Call for contribution
+
+== Runtimes for OpenCL/Vulkan/etc.
+
+* Call for people who are interested in these topics
+
+== Open topics
+

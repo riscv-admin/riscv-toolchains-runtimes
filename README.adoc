@@ -36,7 +36,7 @@ For more info see link:./meetings/README.adoc[here].
 
 The Toolchain and Runtimes HSC is monitoring
 the RISC-V status of a range of external projects.
-For more info see link:./monitoring/README.adoc[here].
+For more info see link:https://wiki.riscv.org/display/TECH/RISC-V+Software+Ecosystem[here].
 
 == CI service for GNU toolchain
 

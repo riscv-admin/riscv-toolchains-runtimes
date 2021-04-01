@@ -1,0 +1,72 @@
+////
+SPDX-License-Identifier: CC-BY-4.0
+////
+
+:leveloffset: 1
+= RVI Toolchain & Runtimes HSC Meeting
+
+Monday, March 29, 2021
+
+== Introduction
+
+* Christoph promotes the T&R github repository
+* Christoph mentions the new 'groups' repository
+  Conversion Asciidoc -> Markdown needed
+* Christoph shows the RISC-V software ecosystem wiki pages
+
+== GCC sync-up calls
+
+* Christoph gives a quick overview of the last GCC sync-up call
+** Half precision data types: `__fp16` vs `_Float16`
+** GNU branch management
+** GCC vector support status update
+** RISC-V K support status update
+** RISC-V B support status update
+
+== LLVM sync-up calls
+
+* Christoph gives a quick overview of the last LLVM sync-up call
+** Patches or bugs to note / briefly discuss
+*** Reported bug in V support - feels too late for 12.0.0 at this point?
+*** Parsing multi-lib config from GCC
+*** 'v' inline asm constraint (-> like GCC does)
+*** Enabling VIU75 and vector support
+** Integer materialisation
+** RFC: Support of non-default floating point environment on RISC-V
+** RFC: `__fp16` on RISC-V
+
+== psABI TG
+
+* Kito gives an overview of the ongoing tasks
+** Document is being revised
+** GitHub issues are worked off (PRs are being merged)
+** Added a README including list of links to external docs
+** Working on a plan to move forward
+** First regular meeting on April 19
+
+== psABI-releated topics
+
+* Kito names a list of psABI-related repos under riscv/*
+* Some don't look maintained
+* Question: what to do? i.e who will be responsible
+* Christoph and Kito will work out a plan
+
+== CFP for Development Tools and Tool Chains
+
+* Christoph describes the publicly known details
+** Forum date: June 2, 2021
+** CFP is open now
+** CFP closes on Friday, April 23
+
+== Open topics
+
+* Mark: There is an upcomming change in the extension review.
+        SW SSC/T&R HSC will be included in the extension review process.
+
+* Phil: Is there an update for the B-extension status? Timeline?
+  Wei Wu: Should be done in 4-6 weeks
+          Will send more details to the mailing list
+
+* Ben: K-extension for GCC/LLVM: is there a psABI change needed?
+  Jessica: No, the information just needs to go into the ELF attributes.
+

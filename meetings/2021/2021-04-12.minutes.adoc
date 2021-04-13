@@ -1,0 +1,92 @@
+////
+SPDX-License-Identifier: CC-BY-4.0
+////
+
+:leveloffset: 1
+= RVI Toolchain & Runtimes HSC Meeting
+
+Monday, April 12, 2021
+
+== Introduction
+
+* Christoph promotes the T&R github repository
+* Christoph reports that the T&R agenda approval has been requested (part of the next chair's meeting)
+
+== GCC sync-up calls
+
+* Christoph gives a quick overview of the last GCC sync-up call
+** riscv-glibc repo is archived now
+** riscv-newlib/riscv-dejagnu are planned to be archived soon
+** Updates for riscv-gnu-toolchain: glibc 2.33, Linux 5.10, qemu 5.2.0
+** Extension support status:
+*** K: GCC and Binutils implementation done; testing (writing test cases) is ongoing
+*** B: GCC and Binutils implementation done; testing (writing test cases) is ongoing
+*** P: GCC and Binutils development (in parallel); testing in preparation
+*** Z*inx patches done, testing is ongoing
+*** Zce and V support is in planning
+
+* Mark: we should define the term "done" of an implementation, so it is clear for reporting
+* Mark: we should keep a todo list of open items
+
+== LLVM sync-up calls
+
+* Evandro gives a quick overview of the last LLVM sync-up call
+** Use softPromoteHalf legalisation for fp16 (mitigating extra precision in calculations)
+** Bitmanip intrinsics 
+** LocalStackSlot pass (improving stack usage)
+** Avoiding setHasMultipleConditionRegisters
+** [RFC] Permit load/store/alloca for struct containing all scalable vectors (especifically, Zvlsseg)
+** Support parsing multi-lib config from GCC (for mutual library compatibility)
+** DAG nodes and pseudo instructions for CSR access (generic system register access)
+** Fixing stack slot for argument types that aren't a multiple of 64 bits (improving stack usage)
+
+== psABI TG
+
+* Kito announces the first regular meeting on April 19
+** Meeting will be held monthly
+** Discuss PR merge policy
+** Identify high priority work items
+
+* Christoph would like to finalize the TG's agenda in that call as well
+
+* Mark would like to see potential show stoppers for other TGs resolved first
+** E.g. ELF flags/attributes
+
+== CFP for Development Tools and Tool Chains
+
+* Christoph describes the publicly known details
+** Forum date: June 2, 2021
+** CFP is open now
+** CFP closes on Friday, April 23
+** Invitation for everyone to participate on the CFP
+* Collective brainstorming about potential talks
+** State of the union
+** Introduction talk (components, riscv-toolchain, how to get started with qemu)
+** OpenJDK port
+** V8 port
+** GCC/LLVM extension status
+** Performance (tools, benchmarks, …)
+** Debugging tools
+** K, B, P, Z*inx implementation story
+** Blockchain SIG
+** AI SIG
+** HPC group
+** Krypto
+** Code Size TG
+
+== Open topics
+
+* Christoph describes the SIG Code Opt situation
+** TG Code Size remains like it was since its inception
+** SIG Code Speed has currently nobody willing to chair it
+** Therefore SIG Code Speed is not active at the moment ("parking lot")
+** Current focus is getting ISA extensions supported in the toolchains
+** Focus on Code Speed will follow later
+** Any Code Speed related topics can be discussed in T&R meetings
+
+* Phil mentions the current spinlock status
+** Replacement of test-and-set locks by ticket-locks or MCF-locks in OpenSBI and Linux
+** OpenSBI: merged (ticket-locks)
+** Discussions about LL/SC guarantees/limits (-> constrained LL/SC sequences in unpriv spec)
+** Linux: heated discussions on the mailing list (incl. usage of extreme wording)
+

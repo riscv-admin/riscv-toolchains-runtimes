@@ -1,0 +1,66 @@
+////
+SPDX-License-Identifier: CC-BY-4.0
+////
+
+:leveloffset: 1
+= RVI Toolchain & Runtimes HSC Meeting
+
+Monday, April 26, 2021
+
+== Introduction
+
+* Christoph promotes the T&R github repository
+
+== GCC sync-up calls
+
+* Christoph gives a quick overview of the last GCC sync-up call
+* Next call will be on May 6, 2021
+** Extension support status:
+*** B Binutils: in review
+*** B GCC: waiting for Binutils
+*** K Binutils: in review
+*** K GCC: merged
+*** P Binutils: in review
+*** P GCC: in review
+*** Zce and support is in planning
+*** V support state is evaluated
+
+== LLVM sync-up calls
+
+* The last LLVM sync-up call was cancelled
+* Next call will be on Apr 29, 2021
+
+== psABI TG
+
+* Kito gives an overview of the psABI TG status
+** Meeting was held on Apr 19
+** Minutes can be found here: https://github.com/riscv/groups/blob/main/psABI/MINUTES/meeting-20210419.adoc
+** Next meeting: May 17
+** Currenlty working on policy for merging PRs (v2 is in progress)
+
+== GCC atomics ==
+
+* Christoph presents the objective of his work on GCC's A extension support
+** The current implementation has a few limitations
+*** Use of FENCEs vs ordering bits (.aq/.rl)
+*** Use of I/O FENCEs in user space
+*** store vs AMOSWAP
+** Resulting tickets and patchset
+*** PR100265: Use proper fences for atomic load/store
+**** https://gcc.gnu.org/bugzilla/show_bug.cgi?id=100265
+*** PR100266: Provide programmatic implementation of CAS
+**** https://gcc.gnu.org/bugzilla/show_bug.cgi?id=100266
+*** Patchset with fixes: https://gcc.gnu.org/pipermail/gcc-patches/2021-April/568684.html
+** Side-effects
+*** PR100264: REE does not work on PARALLEL expressions with a single register SET child
+**** https://gcc.gnu.org/bugzilla/show_bug.cgi?id=100264
+**** SC.W a3, a2, (a0) ; S.EXT a3, a3 //S.EXT is not needed, but REE cannot handle SC.W
+**** REE...redundant extension elimination
+**** Patch with fix: https://gcc.gnu.org/pipermail/gcc-patches/2021-April/568680.html
+*** Binutils PRPR27764: Add tests for A extension
+**** https://sourceware.org/pipermail/binutils/2021-April/116220.html
+
+== Open topics
+
+* Christoph invites others to bring more technical topics into the meeting
+

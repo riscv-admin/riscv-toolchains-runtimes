@@ -1,0 +1,92 @@
+////
+SPDX-License-Identifier: CC-BY-4.0
+////
+
+:leveloffset: 1
+= RVI Toolchain & Runtimes HSC Meeting
+
+Monday, May 10, 2021
+
+== Introduction
+
+* Christoph promotes the T&R github repository
+
+== Toolchain Sign-Off Criteria ==
+
+* GNU Toolchain version exists
+* Nidal prepared one for LLVM
+* Nidal presents the policy
+** Request for feedback (mail or within the document)
+* Christoph raises a couple of questions:
+** Who is reponsible for enforcing the rules?
+** Mark: in the end it is T&R, but they can of course delegate that
+** Who will take over the changes on the way to mainline?
+** There is no common process. E.g. LLVM merges everything (can be enabled by explicit flags).
+
+== Requests for toolchain releases ==
+
+* Request from architectural testing group for toolchain releases
+* Currently we don't have resources for that
+* Lowest effort: provide toolchain made from upstream stable branches
+** Drawback: takes quite some time until new features are available (e.g. GCC releases once per year)
+* Going with upstream/master is good either
+** New features -> new bugs
+* Backporting changes on a dedicated branch
+** Significant development and QA efforts
+** Requires dedicated team (-> no resources)
+* Christoph: Should RVI provide toolchain releases? if yes, which features should be included?
+** [General discussion, about what would be reasonable]
+** Jessica: we might also ask the arch test group if recent binutils would not be sufficient
+
+== Overlay TG ==
+
+* Overlay TG was working on a specification of an overlay mechanism
+** Arch-independent specification
+** RISC-V specific high level design
+* T&R has done document reviews
+* psABI had a discussion about the ABI implications (reserved registers)
+* What else can T&R do?
+** T&R would like to not comment on the arch-independent part (i.e. speak for other archs)
+** T&R has provided feedback to the RV-specific parts
+** Ofer: Overlay TG is discussing ABI issues in the next meeting
+** Mark: Where does the Overlay spec go in the long term (i.e. what is the goal)?
+** Over: The long-term goal has not been defined yet.
+** Jessica: It would be good to publish the arch-independet spec early.
+
+== psABI TG
+
+* Jessica gives an overview of the psABI TG status
+** Continued discussion around Zfinx and PR merge policy
+** Next meeting: May 17
+*** Tentative agenda:
+*** V
+*** Zfinx?
+*** Moving RISC-V attributes section forwards?
+*** Further compact ABI discussion?
+
+== GCC sync-up calls
+
+* Next call will be on May 20, 2021
+** Extension support status:
+*** B/Zb* Binutils: in review
+*** B/Zb* GCC: in progress
+*** B/Zb* LLVM: fully supported
+*** K/Zk* Binutils: in review
+*** K/Zk* GCC: merged
+*** P Binutils: in review
+*** P GCC: in review
+*** V Binutils: available
+*** V GCC: tentative support
+*** V LLVM: fully supported, including of variable and fixed length vectors and the variable length vector builtins API
+*** Zfh LLVM: fully supported
+*** Zce: requested by Tariq; implementation started
+
+== LLVM sync-up calls
+
+* Next call will be on May 13, 2021
+
+== Open topics
+
+* Philipp raises the question about moving/cancelling the next meeting as it would be on a public holiday in some countries.
+* As there are no opinions, this will be discussed offline.
+

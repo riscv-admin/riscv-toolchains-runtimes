@@ -1,0 +1,104 @@
+////
+SPDX-License-Identifier: CC-BY-4.0
+////
+
+:leveloffset: 1
+= RVI Toolchain & Runtimes HSC Meeting
+
+Monday, June 7, 2021
+
+== Introduction
+
+* Christoph promotes the T&R github repository
+* Christoph promotes the GCC/LLVM RISC-V sync-up calls
+** Christoph mentions recent contributions from EPI developers (working on riscv-gcc)
+*** Christoph proposes to invite them to the GCC sync-up call
+*** Christoph will do that
+
+== T&R Forum recap
+
+* Christoph thanks all speakers, organizers, CFP participants and all otherwise involved persons
+* Christoph asks for feedback
+* Mark says he will work with Philipp on further improving RVI events
+** Talks were half about HOW and half about WHAT
+** Goal is to have more HOW talks
+* Jeremy would like to have a more narrow focus of the talks to have a higher chance of acceptance
+** Mark asks Jeremy to provide this feedback via email to Philipp and him
+
+== Extension and feature support
+
+* Christoph promotes the Extension and feature support page in the Wiki
+** All RV ISA/ABI-related extensions and features
+* Christoph asks for feedback and helping hands of people with the required knowledge
+* Mark asks to provide a description what to put into the table cells
+* Mark asks to announce the wiki page in tech announce
+* Mark proposes to reach out to the debug group for GDB topics
+** Philipp mentions that GDB is maintained by T&R people, which might know more
+* Jessica asks how to deal with LLVM's sub-projects (clang, lldb, etc)
+* Jessica asks about a FreeBSD column
+** Mark proposes to discuss this offline and nominate people to driver this further
+
+== Extension status
+
+* Christoph summarizes the implementation status of Binutils/GCC patches for Zb*, Zk* and P
+** Mark mentions Zb* will be in public review (45 days period) very soon
+** Mark expects Zk* will be in public review in about a month
+** Mark also mentions that Priv 1.12 is upcoming (expecting to have the H extension included)
+** Further, Mark expects the V extension to be done by the end of the summer
+
+== Integration and Experimental Branch (GCC)
+
+* Kito reports the recent creation of FSF vendor branches for RISC-V
+** https://gcc.gnu.org/pipermail/gcc/2021-June/236229.html
+* Christoph asks about the transition from riscv-gcc to these branches
+** Kito want so let existing PRs finish in the github repos
+** At a certain point in time, that is not yet defined, he wants to stop accepting PRs in the github repo
+
+== GCC copyright assignment policy
+
+* Christoph reports, that the GCC steering committee has changed the copyright assignment policy
+* Christoph proposes that riscv-gcc on github and the new RISC-V vendor branches adopt this changed policy
+** Kito agrees to do so
+* Christoph mentions, that the GNU toolchain signoff criteria policy document needs to be changed as well
+** This document is currently under acceptance voting (by chairs)
+** Christoph will take care, that either Jeremy and/or he will adjust the document after the current period
+*** No objections to the proposal.
+** Christoph proposes to remove the ACT pass requirement in the GNU toolchain signoff policy (as suggested during the voting reviews)
+*** No objections to the proposal.
+** Jessica proposes to clarify the testing paragraph in the document.
+*** No objections to the proposal.
+
+== Relax the canonical order checking of arch string for -march option
+
+* Kito proposes to relax the ordering requirements of the -march string in GCC and LLVM
+** https://github.com/riscv/riscv-toolchain-conventions/issues/11
+** No objections to the proposal.
+* Mark asks to work with Elisa on getting the ABI/API/Convention documents brushed up
+** Goal is to generate PDF documents and put them on riscv.org
+
+== psABI TG: current status
+
+* Jessica reports latest dicussions of the psABI TG
+* Jessica invites for the next psABI meeting on June 14, 2021
+
+== CI for GCC patches
+
+* Wei Wu reports the status of the CI service for GCC patches
+** https://lists.riscv.org/g/tech-toolchain-runtime/message/208
+** Patchwork is used to collect patchsets from gcc-patches
+*** http://patchwork.ozlabs.org/project/gcc/list/
+** The CI service regularly polls patchwork for new patchsets
+** Trigger a Jenkins build for new patches (Ubuntu 18.04)
+*** Build cross toolchain
+**** RV64GC/LP64D and RV32GC/ILP32D
+**** Newlib
+*** Execute GCC and Binutils test suite
+
+== Open topics
+
+* Christoph asks if we can do something to help Overlay TG with their ABI issue
+** Kito says, that he wants to make a proposal to resolve the issue
+
+* Arun asks if there are objections for moving Zfinx forward
+** This will be handled offline
+

@@ -58,3 +58,9 @@ and the number of removed gaps is not reused. New gap items are appended to the 
 * Description: The RISC-V vector extension needs basic support in GCC (compiler flags support, intrinsics support, tests).
 * Comparison to competition: All other major architectures have vector support in upstream GCC.
 
+=== 5. Embedded ABI ===
+
+* Tags: psABI
+* Date: 15.2.2022
+* Description: There have been multiple attempts to establish an embedded ABI. In recent discussions a parameterized ABI has been proposed, which allows to provide a flexible ABI framework that's suitable for all needs.
+* Comparision to competition: Most other architectures are not targeting low-end embedded devices, high-end servers, specialized systems (e.g. ML accelerators) and everything in-between.

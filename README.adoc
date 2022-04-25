@@ -2,40 +2,25 @@
 SPDX-License-Identifier: CC-BY-4.0
 ////
 
-= Toolchains and Runtimes HSC
+= Toolchains SIG
 :uri-license: {uri-rel-file-base}LICENSE
 
-This is the home of the RISC-V Toolchains and Runtimes HSC.
-The HSC's charter can be found link:./charter.adoc[here].
+This is the home of the RISC-V Toolchains SIG
+The SIG's charter can be found link:./charter.adoc[here].
 
 * Chair: Christoph Müllner
 * Co-Chair: Evandro Menezes
 
-We are reporting to the RVI Software HC.
-
-Our reporting RVI groups:
-
-* TG Overlays
-* SIG Code Speed
-* TG psABI
-* TG EABI (dotted line)
-* SIG Managed Runtimes (in inception phase)
-* SIG HPC
-
-Planned future groups:
-
-* SIG DB/App
-* SIG AI/ML/NLP
+We are reporting to the Applications & Tools HC.
 
 == Regular meetings
 
-The Toolchain and Runtimes HSC meets bi-weekly.
+The Toolchains SIG meets bi-weekly.
 For more info see link:./meetings/README.adoc[here].
 
 == Toolchain and Runtimes monitored projects
 
-The Toolchain and Runtimes HSC is monitoring
-the RISC-V status of a range of external projects.
+The Toolchains SIG is monitoring the RISC-V status of a range of external projects.
 For more info see link:https://wiki.riscv.org/display/TECH/RISC-V+Software+Ecosystem[here].
 
 == CI service for GNU toolchain

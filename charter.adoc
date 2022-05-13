@@ -2,18 +2,18 @@
 SPDX-License-Identifier: CC-BY-4.0
 ////
 
-= Charter of the RISC-V International Toolchains and Runtimes HSC
+= Charter of the RISC-V International Toolchains SIG
 :toc:
 
-Revision: 0.99
+Revision: 0.99.1
 
 == Scope
 
-The Toolchains and Runtimes HSC develops the strategy, identifies gaps, prioritizes tasks, spawns TGs and SIGs, and governs any SIG or TG under its umbrella for the software development environment used to build the RISC-V software ecosystem.
+The Toolchains SIG develops the strategy, identifies gaps, prioritizes tasks for the software development environment used to build the RISC-V software ecosystem.
 
 == Goals
 
-The HSC's main goals are:
+The SIG's main goals are:
 
 - Push RISC-V into open-source software
 - Pull developers to the RISC-V ecosystem
@@ -37,6 +37,7 @@ To achieve these goals the following steps are taken:
 [cols="<1,<2,<3,<4",options="header,pagewidth",]
 |================================================================================
 | _Revision_ | _Date_            | _Author_          | _Modification_
+| 0.99.1     | May 13, 2022      | Christoph Müllner | Reflect changes from HSC to SIG.
 | 0.99       | July 20, 2021     | Christoph Müllner | Adjustments according to feedback.
 | 0.90       | January 14, 2021  | Christoph Müllner | Importing and adjusting initial version.
 |================================================================================

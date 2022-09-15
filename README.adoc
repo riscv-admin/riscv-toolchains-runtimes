@@ -8,8 +8,8 @@ SPDX-License-Identifier: CC-BY-4.0
 This is the home of the RISC-V Toolchains SIG
 The SIG's charter can be found link:./charter.adoc[here].
 
-* Chair: Christoph Müllner
-* Co-Chair: Evandro Menezes
+* Chair: Christoph Müllner (VRULL)
+* Vice-Chair: George K Chen (Rivos)
 
 We are reporting to the Applications & Tools HC.
 

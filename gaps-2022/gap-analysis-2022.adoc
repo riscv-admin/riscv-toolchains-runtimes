@@ -64,3 +64,10 @@ and the number of removed gaps is not reused. New gap items are appended to the 
 * Date: 15.2.2022
 * Description: There have been multiple attempts to establish an embedded ABI. In recent discussions a parameterized ABI has been proposed, which allows to provide a flexible ABI framework that's suitable for all needs.
 * Comparision to competition: Most other architectures are not targeting low-end embedded devices, high-end servers, specialized systems (e.g. ML accelerators) and everything in-between.
+
+=== 6. Go performance ===
+
+* Tags: Compiler, Runtimes, Performance
+* Date: 8.3.2022
+* Description: The Golang lacks of optimize code generation for RISCV.
+* Comparision to competion: Backends for other architectures (AArch64, PowerPC, x86-64) have that.

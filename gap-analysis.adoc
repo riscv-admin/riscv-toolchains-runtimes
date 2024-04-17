@@ -17,6 +17,103 @@ The gaps have the following properties:
 
 == Gaps backlog
 
+=== psABI: ABI versioning/breakage
+
+* Tags: psABI
+* Description: ABI breaks become inevitable at one point. We need to ensure to have a proper versioning scheme and being able to enforce that.
+* Status: Open
+
+=== psABI: Alignment Relocation
+
+* Tags: psABI
+* Description: Alignment directive can specify 1) required alignment, 2) padding byte content and 3) the maximum number of bytes that should be skipped by the alignment directive, however RISC-V can only handle 1 correctly, but 2 and 3 do not work as expected.
+* Link: https://ftp.gnu.org/old-gnu/Manuals/gas-2.9.1/html_chapter/as_7.html#SEC70
+* Status: Open
+
+=== psABI: Flexible eABI
+
+* Tags: psABI, eABI
+* Description: Design flexible ABI for optimizing different embedded system applications. Embedded application might has different requirements than the Linux or *BSD environment, and embedded world also have very diversity requirements, so we intend to not just define a single ABI for all embedded system, and define
+* Ticket: https://github.com/riscv-non-isa/riscv-elf-psabi-doc/issues/305
+* Status: Open
+
+=== psABI: ePIC
+
+* Tags: psABI
+* Description: medlow and medany only provide limited capability to access the address space, capability to access the whole address space is useful for specific areas. We need a code mode that has the capability to access the full address space.
+* Status: open
+
+=== psABI: runtime library ABI
+
+* Tags: psABI
+* Description: LLVM / compiler-rt has had inconsistent helper function names for fp16 types with gcc/libgcc for a while, and fixed that later, but why this happened is because we don't have a standard document to follow.
+  We need to specify the interface and semantics of compiler helper functions in libgcc/compiler-rt, we don't have a formal specification on that, but having a de-facto standard on libgcc and compiler-rt, we need to document that down.
+* Status: open
+* Link: https://github.com/ARM-software/abi-aa/tree/main/rtabi32
+
+=== psABI: vendor relocation
+
+* Tags: psABI
+* Description: psABI has defined a range of relocation for non-standard use, but didn't have a complete solution to prevent collision between different vendor relocations. Vendors might define their own custom instruction which require relocation, e.g. new branch instruction, new load/store instruction with different immediate bits.
+* Status: open
+
+=== psABI: Alignment of `__int128` on ILP32
+
+* Tags: psABI
+* Description: The alignment of `__int128` is defined on LP64 but not on ILP32.
+* Status: open
+
+=== psABI: ILP32E/ILP64E
+
+* Tags: psABI
+* Description: ABIs for RV32E/RV64E are not ratified, there are some issues when combining ILP32E with D extension.
+* Ticket: https://github.com/riscv-non-isa/riscv-elf-psabi-doc/pull/299
+* Ticket: https://github.com/riscv-non-isa/riscv-elf-psabi-doc/issues/269
+* Status: Open
+
+=== psABI: Optional Redzone
+
+* Tags: psABI
+* Description: Redzones provide some performance opportunity (e.g. eliding frame setup for leaf functions), and provide an escape hatch for compiler implementations (e.g. for having a scratch register available.)
+  The RISCV ABI is currently specified without a redzone.  Adding one in a backwards compatible manner would require some form of marker in the ELF file, and enforcement in the dynamic loader.
+* Status: Open
+
+=== psABI: Stack frame layout
+
+* Tags: psABI
+* Description: Portability requires a defined stack frame layout. It's different from existing systems (so code needs risc-v-specific changes), but it's not currently documented.
+* Ticket: https://github.com/riscv-non-isa/riscv-elf-psabi-doc/issues/18
+* Status: Open
+
+=== psABI: TLSDESC relocations
+
+* Tags: psABI
+* Description: emutls is broken for rv64 (at least in llvm) 🙂and although rv64 could be the first Android architecture to use ELF TLS rather than emutls by default (because it's the first one to come after we added ELF TLS to the system), it's a shame we can't use TLSDESC relocations for that.
+* Ticket: https://github.com/riscv-non-isa/riscv-elf-psabi-doc/issues/94
+* Status: open
+
+=== psABI: ilp32 for RV64
+
+* Tags: psABI
+* Description: ILP32 has three use-cases 1) vserver hosting (memory bound), 2) netbooks/tablets (low memory, want performance), and 3) scientific tasks (want every % of performance).
+* Link: https://wiki.debian.org/X32Port
+* Status: open
+
+=== Mapping symbol
+
+* Tags: psABI
+* Description: Define a mapping symbol to improve user experience of objdump
+* Ticket: https://github.com/riscv-non-isa/riscv-elf-psabi-doc/pull/196
+* Status: open
+
+=== Relocation for ULEB128
+
+* Tags: psABI
+* Description: ULEB128 are widely used now, and the ULEB128 will be used for encoding the address difference.
+  Dwarf has some fields that only support uleb128, which might cause problems if we don't have relocation to those fields when relaxation enabled.
+* Ticket: https://github.com/riscv-non-isa/riscv-elf-psabi-doc/pull/162
+* Status: open
+
 === Fine-grained cost model
 
 * Tags: Compilers, Performance
@@ -91,8 +188,11 @@ The gaps have the following properties:
 === psABI: Vector ABI(s)
 
 * Tags: psABI
-* Description: Document vector ABIs (for variable length vectors and fixed-length vectors) to ensure correctness and interoperability
+* Description: Document vector ABIs (for variable length vectors and fixed-length vectors) to ensure correctness and interoperability. This includes vector calling conversion, vector type alignment, C++ name mangling for vector type.
 * Status: vector ABIs have been specified and is implemented
+* Ticket: https://github.com/riscv-non-isa/riscv-elf-psabi-doc/issues/264
+* Ticket: https://github.com/riscv-non-isa/riscv-elf-psabi-doc/issues/347
+* Link: https://github.com/ARM-software/abi-aa/blob/main/vfabia64/vfabia64.rst
 
 === Auto-vectorization
 

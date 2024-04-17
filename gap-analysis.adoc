@@ -1,0 +1,128 @@
+////
+SPDX-License-Identifier: CC-BY-4.0
+////
+
+= Toolchains SIG
+:uri-license: {uri-rel-file-base}LICENSE
+
+This page lists gaps that have been identified by the Toolchains SIG and are planned to be addressed for 2024.
+
+The gaps have the following properties:
+
+* Title
+* Tags
+* Description
+* Status
+* Ticket (if existing)
+
+== Gaps backlog
+
+=== Fine-grained cost model
+
+* Tags: Compilers, Performance
+* Description: The backend of GCC lacks a fine-grained cost model to optimize code generation for specific cores.
+* Status: Open (even if the current cost model in the compilers is simplified, we need actual HW to drive this effort)
+
+=== Embedded ABI
+
+* Tags: psABI
+* Description: There have been multiple attempts to establish an embedded ABI. In recent discussions a parameterized ABI has been proposed, which allows to provide a flexible ABI framework that's suitable for all needs.
+* Status: Open
+
+=== Matrix intrinsics
+
+* Tags: C API
+* Description: RVI drives efforts for two matrix extensions. Both need intrinsics support.
+* Status: Open
+
+=== Matrix primitives API
+
+* Tags: C API
+* Description: RVI drives efforts for two matrix extensions. A common primitives API could be considered.
+* Status: Open
+
+== Gaps for 2024
+
+=== psABI: Pointer masking
+
+* Tags: psABI
+* Description: We need to specify the details of pointer masking to ensure correctness and interoperability
+* Status: Open
+
+=== psABI: _BitInt ABI
+
+* Tags: psABI
+* Description: A _BitInt ABI needs to be defined to ensure interoperability.
+* Status: Open
+* Ticket: https://github.com/riscv-non-isa/riscv-elf-psabi-doc/pull/419
+
+=== Function attributes
+
+* Tags: C API
+* Description: We need to specify a few function attributes (vector CC, prestacking, multi-versioning) to ensure interoperability.
+* Status: Open
+
+=== Profiles support
+
+* Tags: Toolchain conventions
+* Description: We need profiles support in the toolchains.
+* Status: Open (LLVM is done as of March 2024)
+* Ticket: https://github.com/riscv-non-isa/riscv-toolchain-conventions/pull/36
+
+=== Utilize ifunc support
+
+* Tags: Runtimes, Performance
+* Description: Glibc offers an indirection mechanism to call target-specific implementations for functions like strlen, strcmp, memcmp. Upstream glibc does not untilize this mechanism and uses therefore unoptimized implementations (Zb*, V, Zawrs).
+* Status: Open (Linux has added a mechanism to dynamically detect available extensions as runtime (`hwprobe`). This allows to include ifunc-optimizations on top of that.)
+
+=== Cleanup of C-API, ASM manual, toolchain conventions
+
+* Tags: Cleanup
+* Description: Migration from Markdown to ASCIIdoc; adoption of RVI template; CI to build PDF (same like psABI)
+
+== Gaps for 2023
+
+=== psABI: Atomics ABIs
+
+* Tags: psABI
+* Description: Document atomics ABI (for A and Ztso) to ensure correctness and interoperability
+* Status: Done (atomics ABIs have been defined and implemented)
+
+=== psABI: Vector ABI(s)
+
+* Tags: psABI
+* Description: Document vector ABIs (for variable length vectors and fixed-length vectors) to ensure correctness and interoperability
+* Status: vector ABIs have been specified and is implemented
+
+=== Auto-vectorization
+
+* Tags: Compilers, Performance
+* Description: The (recently ratified) RISC-V vector extension allows to utilize and extend GCC's auto-vectorization capabilities. Currently, there is no (public information about) active work in this area.
+* Status: Both major compilers (GCC and LLVM) support auto-vectorization as of end 2023
+
+=== Vector intrinsics
+
+* Tags: Compilers
+* Description: Besides auto-vectorization, RISC-V vector instructions should be emitted by compilers via an extensions of the C language (intrinsics).
+* Status: RVV intrinsics TG has been formed that works on the specification. As of Apr 2024 the spec is close to ratification and implemented in GCC and LLVM.
+
+=== Bitmanip + scalar crypto intrinsics
+
+* Tags: Compilers, C-API
+* Description: Zb* extensions have been ratified a while ago. We need to agree on intrinsics and implement them.
+* Ticket: https://github.com/riscv-non-isa/riscv-c-api-doc/pull/44
+* Status: Intrinsics have been defined and implemented in GCC and LLVM
+
+=== LLVM support in riscv-gnu-toolchain scripts
+
+* Tags: Compilers
+* Description: The riscv-gnu-toolchain scripts only supports GCC. We should add LLVM support as well.
+* Status: LLVM support has been merged
+
+== Gaps for 2022
+
+=== Basic vector support
+
+* Tags: Compilers
+* Description: The RISC-V vector extension needs basic support in GCC (compiler flags support, intrinsics support, tests).
+* Status: Both major compilers (GCC and LLVM) have basic vector support as of end 2022

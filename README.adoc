@@ -5,7 +5,7 @@ SPDX-License-Identifier: CC-BY-4.0
 = Toolchains SIG
 :uri-license: {uri-rel-file-base}LICENSE
 
-This is the home of the RISC-V Toolchains SIG
+This is the home of the RISC-V Toolchains SIG.
 The SIG's charter can be found link:./charter.adoc[here].
 
 * Chair: Christoph Müllner (VRULL)
@@ -15,13 +15,45 @@ We are reporting to the Applications & Tools HC.
 
 == Regular meetings
 
-The Toolchains SIG meets bi-weekly.
-For more info see link:./meetings/README.adoc[here].
+The Toolchains SIG meets bi-weekly on Thursday 7 am (Pacific Time).
+Meetings and join information can be found in the link:https://calendar.google.com/calendar/u/0/embed?src=tech.meetings@riscv.org[RVI calendar].
 
-== Toolchain and Runtimes monitored projects
+== Governed repositories and groups
 
-The Toolchains SIG is monitoring the RISC-V status of a range of external projects.
-For more info see link:https://wiki.riscv.org/display/TECH/RISC-V+Software+Ecosystem[here].
+Directly governed projects:
+
+* link:https://github.com/riscv-non-isa/riscv-toolchain-conventions[RISC-V toolchain conventions]: Common command line interface for compilers: -march=..., vendor extensions, etc.
+* link:https://github.com/riscv-non-isa/riscv-c-api-doc[RISC-V C-API]: Common C language extensions: preprocessor macros, intrinsics, function attributes, etc.
+* link:https://github.com/riscv-non-isa/riscv-asm-manual[ASM manual]: Common ASM language extensions: pseudo instructions, asm directives, relocations, etc.
+* link:https://github.com/riscv-collab/riscv-gnu-toolchain[RISC-V GNU (+LLVM) Toolchain]: Build scripts to build RISC-V toolchain (Binutils, GCC/LLVM, newlib/glibc/musl, qemu)
+
+Indirectly governed projects (via dedicated TGs):
+
+* link:https://github.com/riscv-non-isa/riscv-elf-psabi-doc[psABI]
+
+== OSS projects with a tight relationship
+
+Most members of the Toolchains SIG are also active in the communities
+of the following OSS projects:
+
+* Binutils
+* GCC
+* LLVM
+* glibc
+* Newlib
+* GDB
+
+Other related OSS projects are:
+
+* QEMU
+* Spike
+* Linux
+* FreeBSD
+* OpenBSD
+* OpenSSL
+
+More RISC-V-specific information about the RISC-V SW ecosystem can be found
+link:https://wiki.riscv.org/display/HOME/RISC-V+Software+Ecosystem[here].
 
 == CI service for GNU toolchain
 
@@ -31,11 +63,10 @@ link:https://ci.rvperf.org/view/GNU/[here].
 This service is maintained by Wei Wu (PLCT).
 Suggestions are discussed link:https://github.com/riscv/riscv-gnu-toolchain/issues/847[here].
 
-= Links
+== Other useful links
 
-* link:https://wiki.riscv.org/display/TECH/Tech+Home[RVI Tech Home]
-* link:https://github.com/riscv/riscv-elf-psabi-doc[psABI documentation]
-* link:https://github.com/riscv/riscv-platform-specs[RISC-V Platform Specification]
-* link:https://github.com/riscv/riscv-code-size-reduction[SIG Code Size GitHub page]
-* link:https://github.com/riscv/riscv-software-list[RISC-V Software List]
+* link:https://wiki.riscv.org[RISC-V International Wiki]
 * link:https://godbolt.org[Compiler explorer]
+* link:https://github.com/riscv/sail-riscv[Sail RISC-V model]
+* link:https://github.com/riscv-non-isa/riscv-arch-test[RISC-V Architecture Tests]
+* link:https://github.com/riscv/riscv-profiles[RISC-V Profiles]

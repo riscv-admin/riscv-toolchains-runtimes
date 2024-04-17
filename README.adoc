@@ -13,6 +13,10 @@ The SIG's charter can be found link:./charter.adoc[here].
 
 We are reporting to the Applications & Tools HC.
 
+== Gap analysis
+
+Gaps are listed in link:./gap-analysis.adoc[here].
+
 == Regular meetings
 
 The Toolchains SIG meets bi-weekly on Thursday 7 am (Pacific Time).

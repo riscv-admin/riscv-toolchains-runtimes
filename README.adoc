@@ -65,6 +65,7 @@ Suggestions are discussed link:https://github.com/riscv/riscv-gnu-toolchain/issu
 
 == Other useful links
 
+* link:https://github.com/riscv/riscv-isa-manual[RISC-V ISA manual]
 * link:https://wiki.riscv.org[RISC-V International Wiki]
 * link:https://godbolt.org[Compiler explorer]
 * link:https://github.com/riscv/sail-riscv[Sail RISC-V model]

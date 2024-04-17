@@ -2,14 +2,14 @@
 SPDX-License-Identifier: CC-BY-4.0
 ////
 
-= Toolchains and Runtimes HSC meetings
+= Toolchains and Runtimes HSC meetings archive
 
-The Toolchains and Runtimes HSC meets biweekly.
-Current schedule is Monday, 7 am (PT) starting on Feb 15, 2021.
+This is the Toolchains and Runtimes HSC meeting archive.
+In 2021 notes are taken (if any) in the speaker notes of the presentation slides.
 
-Next meeting will be on Mar 15, 2021.
+Note, that this HSC has been converted into the Toolchains SIG in 2022.
 
-Meeting minutes of previous meetings:
+Meeting slides can be found in the link:https://drive.google.com/drive/folders/1gMbDexMDy6-X6i14FHYykR_uGfXofhQX[Toolchains SIG workspace in RVI's Google Drive folder].
 
 == 2021
 

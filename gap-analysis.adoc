@@ -153,6 +153,45 @@ The gaps have the following properties:
 * Status: Open
 * Ticket: https://github.com/riscv-non-isa/riscv-elf-psabi-doc/pull/419
 
+=== psABI: CREL/RELLEB
+
+* Tags: psABI
+* Description: A new relocation format for improving file size, also this format
+  can present infinite type of relocations.
+* Status: Open
+
+=== psABI: RELR
+
+* Tags: psABI
+* Description: A new relocation format for improving size of shared libraries.
+* Status: Open
+
+=== psABI: FDPIC/ePIC
+
+* Tags: psABI
+* Description: FDPIC is a common ABI variant among different architectures for
+  dealing with the MMU-less system, also it can provide smaller memory
+  footprint.
+  NOTE: ePIC was an independent item from the FDPIC, however we identified it can be a
+        specialized variant FDPIC, so we merged those two items and define design those
+        two new ABI together.
+* Status: Open
+* Ticket: https://github.com/riscv-non-isa/riscv-elf-psabi-doc/pull/429
+
+=== psABI: Range extension thunks
+
+* Tags: psABI
+* Description:
+* Status: Open
+* Ticket:
+
+=== psABI: Control-flow Integrity (CFI) support
+
+* Tags: psABI
+* Description:
+* Status: Open
+* Ticket:
+
 === Function attributes
 
 * Tags: C API

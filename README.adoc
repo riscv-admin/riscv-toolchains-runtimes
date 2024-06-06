@@ -9,7 +9,7 @@ This is the home of the RISC-V Toolchains SIG.
 The SIG's charter can be found link:./charter.adoc[here].
 
 * Chair: Christoph Müllner (VRULL)
-* Vice-Chair: George K Chen (Rivos)
+* Vice-Chair: Ana Pazos (Qualcomm)
 
 We are reporting to the Applications & Tools HC.
 

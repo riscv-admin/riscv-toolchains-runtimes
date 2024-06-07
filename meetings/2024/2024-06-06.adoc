@@ -1,0 +1,56 @@
+= Minutes for June 06, 2024
+
+== Attendees
+
+ * Ana Pazos (Qualcomm)
+ * Andrea Bolognani (Red Hat)
+ * Christoph Müllner (VRULL)
+ * Craig Topper (SiFive)
+ * Jiawei (ISCAS)
+ * Kito Cheng
+ * Paul Sherman
+ * Peter Hosek (Google)
+ * Philip Reames (Rivos)
+ * Richard Jones (Red Hat)
+ * Simon Cook (Embecosm)
+ * Tao Liu
+
+
+== Artifacts
+
+ * https://docs.google.com/presentation/d/1KosfHb61o5C-3eBz_pbQwG2vjt4pLTjehNYvohL_YTg/edit#slide=id.gb5f973ee2a_0_594[slides]
+
+== Topics
+
+ * Christoph asked who will be attending the RISC-V Summit in Europe.
+ ** Participants noticed overlap with LLVM Dev meeting.
+ ** Ana will send email to RVI help and LLVM (Tanya Lattner) about it and request cross-checking conference dates in the future.
+ * Christoph mentioned PR for RISC-V charter updates and asked for comments: https://github.com/riscv-admin/riscv-toolchains-runtimes/pull/7/files
+  * Discussed psABI gaps and issues.
+  ** Initial list of psABI gaps are in the last link on page 10 from the slides.
+  ** Kito and Jessica to check the list and come up with a proposal to resolve the gaps/issues.
+  ** A TG might need to be created based on the proposal.
+  * Christoph commented about renaming the repo from riscv-admin/riscv-toolchains-runtimes to riscv-admin/riscv-toolchains.
+  * Discussed recent activity in Toolchain conventions document: #43, #45, #46, #47, #48, #49, #50, #51
+  ** https://github.com/riscv-non-isa/riscv-toolchain-conventions
+  ** #49 (strict-align), #50 (scalar/vector stric-aling)
+  *** Impacts scalar and vector code in GCC but not in LLVM. 
+  *** Craig mentioned that recent cores have vector operations that expect alignment. 
+  *** Philip finds compatibility between toolchains important. GCC and LLVM behaviors should be aligned.
+  * Discussed Recent activity in ASM manual document: #98, #99, #100, #101
+  ** Kito summarized proposal in #99
+  * Discussed recent activity in C-API manual: #67, $72, #73, #74, #75,#76, #78, #79
+  ** Kito mentioned a lot of interest in #74 and summarized the proposal
+  ** Christoph highlighted the most recent issue #79 and asked for comments
+  * Discussed recent activity in riscv-gnu-toolchain: #1472, #1475, #1478, #1119
+  ** Christoph highlighted that new tools should be tested before being integrated.
+  ** Christoph commented on #1472 and mentioned the need to run benchmarks and address failing tests.
+  ** Kito commented on #1478 and mentioned that PIE to be supported by default for linux only, not embedded/baremetal.
+  * Open issues
+  ** Ana shared the status of Zcmp discussion, shared updated slides, and highlighted slide 7 with remarks on Load/Store Pair, Load/Store Multiple and proposed new Zcmp instructions comparisons.
+  ** Updated Zcmp slides: https://docs.google.com/presentation/d/1Qk-pNJ5svY8trYW3Smk073ok9pcEJFc5hsx4rbOoj5M/edit#slide=id.p1
+  ** Tao Liu wants to create a new toolchain (compiler, linker, assembler, etc.) and is seeking guidance
+  *** For compiler and assembler, Christoph pointed out that the documents maintained by the RV Toolchains SIG are the recommended specs.
+  *** For linkers, Ana highlighted that there is no spec for linkers besides psABI spec, hence linkers tend to have very different behaviors. GNU linker is the oldest and people expect compatibility, so it might serve as a guide.
+  *** Ana pointed out Maskray has a useful blog on linkers, specifically on LLD linker that might be useful to read. See https://maskray.me/blog/2020-12-19-lld-and-gnu-linker-incompatibilities
+  *** Christoph shared Maskray's main page: https://maskray.me/

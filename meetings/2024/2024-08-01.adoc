@@ -1,0 +1,38 @@
+= Minutes for August 08, 2024
+
+== Attendees
+
+ * Ana Pazos (Qualcomm)
+ * Christoph Müllner (VRULL)
+ * Jeff Law (Ventana)
+ * Kito Cheng (SiFive)
+ * Philip Reames (Rivos)
+ * Note: list of participants might be incomplete.
+
+== Artifacts
+
+*   https://drive.google.com/drive/u/1/folders/1nd9m0Uu1M_kpr8WBJO1ixeqoMByuI25P[Slides]
+
+== Topics
+* Christoph provided update on Profiles support in GNU toolchain.
+* Ana provided update on AsciiDoc migration and requested people to review.
+** Christoph facing errors with make build commands on Fedora 40.
+** Jeff suggested reaching out to: Kersten (kersten@riscv.org),
+Bill Traynor (wmat@riscv.org) and Docs SIG mailing list.
+** Christoph would like to review/merge AsciiDoc migration patches before more
+changes are made into the documents requiring patch rebasing.
+
+* Christoph highlighted recent activities in SIG Toolchain related
+repos: C-API, Asm manual, Toolchain conventions, C-API.
+*  For riscv-gnu-toolchain, Christoph requested volunteers to bump
+GCC to 14.2.0 and talked about the need to update the tests ignore-lists.
+See https://github.com/riscv-collab/riscv-gnu-toolchain/pull/1472[#1472].
+
+* Open floor discussions
+** Ana talked about Zcmp ABI issue which was posted in https://wiki.riscv.org/display/HOME/Technical+Newsletter?preview=/60981271/90275898/riscv-tech-newsletter-20240705.pdf[RVI July Newsletter].
+** Christoph commented the issue got moderate traction.
+**  Philip commented the best way to move forward is to find people who care
+about the issue to get their support.
+** Christoph reminded of the next meetings:
+Aug 15: psABI, Aug 29: Toolchains SIG and informed that he will be OOO.
+Ana volunteered to run the meeting if needed.

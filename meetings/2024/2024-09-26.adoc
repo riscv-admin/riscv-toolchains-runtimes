@@ -1,0 +1,59 @@
+= Minutes for September 26, 2024
+
+== Attendees
+
+ * Ana Pazos (Qualcomm)
+ * Christoph Müllner (VRULL)
+ * Jeff Scheel (Individual, RVI documentation SIG)
+ * Carl Perry (Individual, RVI documentation SIG)
+ * Craig Topper (SiFive)
+ * Jiawei (ISCAS)
+ * Kito Cheng (SiFive)
+ * Olaf Bernstein (Individual)
+ * Petr Penzin (Tenstorrent)
+ * Philip Reames (Rivos)
+ * Simon Cook (Embecosm)
+
+== Artifacts
+
+* https://docs.google.com/presentation/d/1H3mKVMrb8mDN-GSNboEnPpsS7z8WKrhF-dEPTEG8mkc/edit#[Slides]
+
+== Topics
+* Christoph provided an overview of RVI Matrix extensions and discussed the
+request to support the Matrix extension PoC that includes a proposal for
+creating a MLIR dialect and a proposal for API specification for high
+performance computing libraries/packages. The proposals will be described in a follow up
+email to the group to gather interest from volunteers.
+* Ana shared that besides IREE, Triton is also a platform to consider.
+In addition, selecting some kernels to valid the proposals should be considered,
+for example Matmul kernels from IREE's Benchmark Suite.
+* Petr Penzin expressed interest in HPC and will take a look at the APIs for
+performance libraries.
+* Ana shared the availability of a new
+https://github.com/riscv/docs-dev-guide[Documentation Developer Guide].
+The RVI documentation SIG is accepting feedback comments by October 9th, and a
+linter tool will be made available soon after. Ana will run the tool over the
+Toolchain SIG specs and address issues reported. Anyone pushing patches to the
+specs should be made aware of the tool's availability and comply.
+* Carl Perry who is from the RVI documentation SIG clarified that the
+Documentation Developer Guide will not go through the specs ratification process.
+* Carl Perry and Jeff Scheel raised the need to have tooling consistency
+across all RVI efforts.
+* Christoph clarifed that riscv-gnu-toolchain will not be officially released.
+Nightly builds are made available, but no rigorous test validations are done.
+Issues with nightly builds should be brought up in GNU lists upstream.
+Anything other than putting out version info about what was built is
+out of the scope of this group.
+* Philip Reames corroborated with what Christoph said. The SIG is not
+structured nor funded to pick up the work of official releases.
+He agreed about the need to get people from other RVI efforts off the
+old toolchains.
+* Carl Perry clarified that the version info is useful and he would like
+to add support in riscv-gnu-toolchain for other hosts and target
+architectures including ARM. He will send a proposal with more details to
+the group's mailing list.
+* Open floor discussions: No discussion.
+* Christoph reminded of the next meetings:
+** Oct 24, 2024: Toolchains - Canceled, overlaps with RISC-V Summit.
+** Nov 11, 2024: psABI - Canceled, overlaps with Veterans' Day in the US.
+** Nov 21, 2024: Toolchains - Meeting confirmed.

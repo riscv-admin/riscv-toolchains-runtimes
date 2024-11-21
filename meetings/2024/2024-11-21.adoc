@@ -1,0 +1,69 @@
+= Minutes for September 26, 2024
+
+== Attendees
+
+ * Ana Pazos (Qualcomm)
+ * Christoph Müllner (VRULL)
+ * Carl Perry (Individual, RVI documentation SIG)
+ * Craig Topper (SiFive)
+ * Isaac Chute (RISC-V)
+ * Paul Kirth (Google)
+ * Paul Sherman (Individual)
+ * Philip (?)
+ * Kito Cheng (SiFive)
+ * Ruinland (Andes Technology)
+ * Shihua Liao (?)
+ * Simon Cook (Embecosm)
+
+== Artifacts
+
+* https://docs.google.com/presentation/d/1foYPLcsS6GhgX1xWtSMNPO-KNgBFxNXD/edit?usp=drive_link&ouid=108221621302647420571&rtpof=true&sd=true[Slides]
+
+== Topics
+* Ana hosted the meeting.
+* Christoph highlighted there are several PRs pending in riscv-gnu-toolchain
+and request help from Kito in addressing them.
+* Discussed ASM manual PRs and issues:
+** #113: Kito explained the reason for the new request.
+** #111: Christoph will review the updated patch.
+** Issue #112 - Ana will address the question and work on setting up CI job for
+the toolchain docs. Carl shared he can help with this task.
+* Discussed Toolchain PRs and issues:
+** Ana introduced PR #63 and explained the stable/frozen status of the spec.
+The spec (currently at 0.4) will be promoted to 1.0 (meaning ratified) once the
+assembler support for the instructions is complete and text issues are fixed.
+Christoph shared that the T-HEAD PR was up-streamed but merged after the
+implementation was complete, and suggested we could follow a similar process.
+Ana also suggested splitting the allocation of QC acronym for vendor
+prefix and QUALCOMM string for vendor relocation from the rest of the patch.
+Ana will further discuss the suggestions with her team.
+** Issue #57: Christoph will provide an answer.
+* Discussed C-API PRs:
+** PR #95 was raised by Kito. He summarized the issue and PR is ready to merge.
+Christoph will do it.
+** #94: This PR was dismissed. No further action required.
+** #93: Craig will review this PR.
+** Ana highlighted the assembler improvements in #92 and how it allows defining
+new custom instructions at assembler-level only, without changing the toolchain.
+This is useful to RVI SIGs, like Scalar Efficiency SIG, to explore new
+instructions. Ana is working on open-sourcing sample filters that can be used
+with llvm-objdump and lldb to disassemble and debug instructions supported
+this way. LLVM already supports the improvements. Kito shared he has working
+patches for GCC and will consider upstreaming them.
+** Ana shared that there is a new BoD policy under development that will describe
+spec versioning format (e.g., MAJOR.MINOR) and rule for promoting versions tying
+back to spec status. This change might impact toolchains versioning support.
+** Ana shared info on PCC/LFX Tools migration for scheduling meetings. The chairs
+will be sending new meeting invites using this new process.
+** Ana shared the adoption of Robert's Rules of Order for conducting meetings
+that require formal motions. Some of the practices might be useful for the
+group to adopt (e.g., when to post agenda, cancel meeting, ensuring equal
+opportunity to talk, etc.). Carl and Paul provided further explanation about
+the rules and their origins.
+** Ana highlighted a few takeaways from the RISC-V NA Summit and the
+LLVM Dev Meeting. One attendee also commented favorably on David Patterson's
+talk at the summit.
+* Reminders for the next meetings:
+** Dec 05, 2024: psABI
+** Dec 19, 2024: Toolchains
+** Jan 02, 2025: psABI - to be confirmed

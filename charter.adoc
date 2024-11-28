@@ -5,7 +5,7 @@ SPDX-License-Identifier: CC-BY-4.0
 = Charter of the RISC-V International Toolchains SIG
 :toc:
 
-Revision: 1.0
+Revision: 1.1
 
 == Scope
 
@@ -15,20 +15,20 @@ The Toolchains SIG develops the strategy, identifies gaps, and prioritizes tasks
 
 The SIG's main goals are:
 
-- Push RISC-V into open-source software
-- Pull developers to the RISC-V ecosystem
+- Push RISC-V into open-source toolchain projects
+- Pull developers to the RISC-V toolchain ecosystem
 - Advice on ISA extensions
 
 To achieve these goals, the following steps are taken:
 
-- Advice on ISA extensions and ensure that all future ISA extensions are driven by demonstrable/quantifiable benefits and possibly support them in development tools. Enable the SW HC to drive the ICs to develop extensions necessary to support the strategy.
-- Identify and work with the key open-source projects for the RISC-V software ecosystem: compilers, debuggers, performance analysis tools, libraries implementing performance primitives, and memory management libraries.
-- Liaise between open-source compiler developers and RISC-V task groups defining ISA, profiling, and debug extensions.
-- Reach out to developers and decision-makers to contribute to the RISC-V ecosystem.
 - Promote RISC-V as an ISA to be used for research into novel compilation techniques.
-- Track the support for RISC-V across development tools.
+- Track the support for RISC-V across development tools and identify gaps.
+- Identify and work with the key open-source projects for the RISC-V software ecosystem: compilers, debuggers, performance analysis tools, libraries implementing performance primitives, and memory management libraries.
+- Liaise between open-source compiler developers and RISC-V groups defining new extensions.
+- Streamline RISC-V-specific ABIs (e.g. C calling convention), APIs (e.g. intrinsics, attributes), ASM language, and other interfaces (e.g. command line flags) in the RISC-V toolchain ecosystem.
+- Advice on ISA extensions and ensure that all future ISA extensions are driven by demonstrable/quantifiable benefits and possibly support them in development tools.
+- Reach out to developers and decision-makers to contribute to the RISC-V ecosystem.
 - Support benchmarking and work with benchmark organizations.
-- Benchmark development tools for RISC-V and provide reporting to internal RISC-V committees on the relative progress of development tools targeting RISC-V.
 - Provide access to state-of-the-art development tools and compilation techniques for all RISC-V task groups by fostering an environment of cooperation between academia, open-source tool development, and the RISC-V ecosystem.
 - Engage with new programming languages, programming paradigms, and development tool development towards the strategic goal of making RISC-V the prime choice ("First on RISC-V") for innovation in development tools.
 
@@ -37,7 +37,8 @@ To achieve these goals, the following steps are taken:
 [cols="<1,<2,<3,<4",options="header,pagewidth",]
 |================================================================================
 | _Revision_ | _Date_            | _Author_          | _Modification_
-| 1.0        | Feb 21, 2024      | Christoph Müllner | Bump version to 1.0 (and minor typo fixes)
+| 1.1        | Jun 6, 2024       | Christoph Müllner | Refine steps to reflect actual activities.
+| 1.0        | Feb 21, 2024      | Christoph Müllner | Bump version to 1.0 (and minor typo fixes).
 | 0.99.1     | May 13, 2022      | Christoph Müllner | Reflect changes from HSC to SIG.
 | 0.99       | July 20, 2021     | Christoph Müllner | Adjustments according to feedback.
 | 0.90       | January 14, 2021  | Christoph Müllner | Importing and adjusting initial version.

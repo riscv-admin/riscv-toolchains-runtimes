@@ -1,0 +1,69 @@
+= Minutes for December 19, 2024
+
+== Attendees
+
+ * Ana Pazos (Qualcomm)
+ * Christoph Müllner (VRULL)
+ * Carl Perry (Individual)
+ * Craig Topper (SiFive)
+ * Isaac Chute (RISC-V)
+ * Liao Shihua (ISCAS)
+ * Peter Hosek (Google)
+ * Philip Reames (Rivos)
+ * Ruinland (Andes Technology)
+ * Sam Elliott (Qualcomm)
+ * Simon Cook (Embecosm)
+
+== Artifacts
+
+https://docs.google.com/presentation/d/1bamxiveg5gmo6KkuGDmntfHb9BJYdq2LFz0L6RQJVlU/edit#slide=id.gb5f973ee2a_0_594[Slides]
+
+== Topics
+* Christoph pointed out that patches for Profiles support in GNU Toolchain
+have been pending for a while, but already reviewed by Jeff and Palmer, and
+Toolchain conventions PR is already in place. Christoph to ping Jeff about it.
+* Christoph merged CI/CD workflows to this SIG's documents based on the RVI docs
+template.  He asked volunteers for publishing the docs as draft pre-releases.
+Ana and Carl volunteered to help.
+* Christoph provided a summary of the issues in CI/CD build of
+riscv-gnu-toolchain project.
+* ASM Manual: Add V extension pseudoinstructions (#111) [OPEN] - Christoph
+requested Craig to review it.
+* ASM Manual: Add new directive to creating landing pad info (#113) [OPEN] -
+The issue is still under discussion.
+* ASM Manual: Is there a CI job or are there releases of this document? (#112)
+[OPEN] - We are working on it, as a first step Christoph merged the CI/CD
+flow from RVI docs template in this SIG's documents.
+* C-API: [FMV] Explicit allows different vendors share the bit definition of
+`__riscv_vendor_feature_bits` #96 - Waiting for community comments.
+* C-API: Introduce new attribute norelax #94 - It was concluded the
+attribute is not needed.
+* C-API: Add CMO extension intrinsics #93 and cbo Intrinsic #88 -
+Christoph pointed out that GNU toolchain and LLVM need to align on
+this API. Craig clarified that support for CMO was merged in GCC as CBO.
+Sam explained the history in AArch64 for the need for a target-specific
+prefetch builtin to account for LLVM's target indendent builtin differences
+in specifying cache locality levels. See
+https://github.com/llvm/llvm-project/commit/82b51a14280414a53413ed62c001d2c589c649c3
+Craig confirmed it is a similar issue in RISC-V where
+LLVM prefetch builtin has 4 locality levels and RISC-V target has 5 levels.
+Christoph to reach out to Jeff Law about reverting the patch in GCC and
+agree on the API.
+* Carl Perry who is involved in the RVI HPC SIG inquired about
+shortcomings in Fortran for RISC-V, and whether a gap analysis has been
+conducted to identify missing support in the toolchains, including front-end,
+target-independent, or backend issues. Ana will connect Carl to Barna Ibrahim
+from RISE and ask about RISE projects focused on porting Fortran packages to
+RISC-V. Philip mentioned he knows about some of the gaps and will sync up
+with Carl on the details. Craig also shared that Flang cross compiler seems to
+work.
+* Ana shared how Qualcomm supports external instructions to the LLVM toolchain
+and a filter to used with objdump and LLDB/GDB plugin for disassembling such
+instructions.
+* Ana shared a PDF with a subset of Robert's Rules for conducting meetings.
+Ana, Christoph and Carl shared some thoughts on rules about meeting minutes
+review, whether the majority rules apply to this SIG, and even though this SIG
+does not have formal motions, it still has to make decisions across toolchains.
+* Reminders for the next meetings:
+** Jan 16, 2025: Toolchains
+** Jan 30, 2025: psABI

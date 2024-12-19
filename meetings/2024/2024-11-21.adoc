@@ -1,4 +1,4 @@
-= Minutes for September 26, 2024
+= Minutes for November 21, 2024
 
 == Attendees
 
@@ -7,12 +7,12 @@
  * Carl Perry (Individual, RVI documentation SIG)
  * Craig Topper (SiFive)
  * Isaac Chute (RISC-V)
+ * Liao Shihua (ISCAS)
  * Paul Kirth (Google)
  * Paul Sherman (Individual)
  * Philip (?)
  * Kito Cheng (SiFive)
  * Ruinland (Andes Technology)
- * Shihua Liao (?)
  * Simon Cook (Embecosm)
 
 == Artifacts

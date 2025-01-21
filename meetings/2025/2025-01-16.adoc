@@ -1,0 +1,109 @@
+= Minutes for January 16, 2025
+
+== Attendees
+
+ * Ana Pazos (Qualcomm)
+ * Christoph Müllner (VRULL)
+ * Carl Perry (Individual)
+ * Craig Topper (SiFive)
+ * Deepak (Rivos)
+ * Elliott Hughes (Google LLC)
+ * Guo Ren (Alibaba, XuanTie)
+ * Hao Lin (Samsung)
+ * Isaac Chutei (RISC-V)?
+ * Jessica Clarke (Cambridge)
+ * Jiawei (PLCT)
+ * Kito Cheng (SiFive)
+ * Kyle Chan (Samsung)
+ * Liao Shihua (PLCT-LAB)
+ * Paul Kirth (Google)
+ * Peter Hosek (Google)
+ * Philip Reames (Rivos)
+ * Sam Elliott (Qualcomm)
+ * Simon Gook (Embecosm)
+
+== Artifacts
+
+https://docs.google.com/presentation/d/1liZhEIlrWqdcExICTTXwx6EJxPMtMZty-bwCGG3wR7Q/edit#slide=id.gb5f973ee2a_0_594[Slides]
+
+== Topics
+* Combined Toolchains and psABI meetings.
+* The first half of the meeting addressed Toolchains SIG topics, like the
+recent activity in the Toolchain SIG related repos.
+* The second half of the meeting addressed psABI topics, including CFI status
+update (#417, #434, #452) and other general topics (#381, #453, #454, #455).
+* Toolchain conventions document:
+** #54: Kito shared that the CFI patch in GCC is ready to be merged.
+** #68: Christopher explained the issue with the '.' prefix in vendor
+CSR name casing gdb parsing of command lines to fail. Jessica suggested
+passing the CSR name with quotes to allow gdb to interpret it differently.
+Jessica will also add this suggestion to the raised issue.
+** #69: Christopher explained the standard he follows when adding new
+vendor extension to the toolchain conventions spec. He expects that a link
+to a document that describes the extensions and versions be included in the
+commit. Sam shared the standard should allow more flexibility. Christopher
+shared that patches to add vendor prefix might be still under review but the
+prefix can be considered as reserved, even though links to further documentation
+might be pending.
+** #71: Ana highlighted that this request for adding CHERI vendor prefix was
+reviewed and ready to be merged.
+** #70: Sam clarified that the compiler-rt behavior is following all ABI specs,
+except for EABI (ilp32e). LLVM is correctly emitting CFI info, but compiler-rt
+is not following it. Sam has a compiler-rt patch ready to be pushed, waiting
+for LLVM and GCC to agree on a solution. Jessica and Kito seem to agree with
+Sam's text changes in the PR.
+* C-API document:
+** #68: LLVM patch is close to land, and then we will be ready to merge #68.
+** #76: Kito to revisit it, waiting for LLVM patch to be approved, this PR
+is still in draft stage.
+** #79: Christopher shared he is ok with the patch. But there was some
+discussion on whether LR/SC builtins should be excluded since that code
+has to be written in assembly for tight control on pairing the instructions.
+Additional comments to be added to the PR by Jessica.
+** #85: It was resolved and merged.
+* ASM Manual document:
+** #99, #113: Not discussed since they are in draft state.
+** #122: Sam summarized the proposal. Discussion on whether the directive would
+impact pseudo branches. Kito also raised that it might be a problem with other
+pseudos like  li, call/tail call. Discussion on whether a more descriptive name
+is needed (since it might compress or expand instructions).
+* riscv-gnu-toolchain repo:
+** Christopher shared that the LLVM version was bumped to 19.1.7.
+* psABI topics discussed:
+** CFI related PRs #417, $434, #452: Deepak and Kito clarified on the need for
+landing pad relocation to allow the linker to remove the landing pad if it
+meets certain conditions. Implementation in LLVM is ready and stable, GCC
+implementation is WIP.
+** #381: Kito described the changes related to choosing more expressive
+name and removing address space limitation to allow full 4 GB address space
+from the specification. Elliott questioned why people think this ABI will
+succeed when ARM's has failed and has deprecated the ilp32 on 64-bit. Jessica
+shared Elliott's concern. But it was agreed to make it an experimental ABI
+so that THead, Andes, SiFive can experiment with it.
+** #453: Sam explained the issue and brainstormed possible solutions:
+local / map symbol (not clear how to associate it with the relocation);
+arbitrary local symbol; avoid lib resolution for that type of symbol;
+consider it a special symbol type and prevent users from using the symbol;
+each vendor has a RISC-V session with symbol attribute. Kito tends to agree
+with a local /map symbol solution would be ok. But there are complications
+with the LLVM assembler to make the local symbol be defined in the same place
+where the relocation is applied. It was also discussed that the title for this
+issue needs to be more descriptive. It was also agreed that a discussion
+about the best way to define the RISC-V vendor symbol should be started in
+a separate issue. Sam to create the new issue and list the possible
+alternatives for further discussion.
+** #454: This is a popular topic in the community. Compilers seem to have
+been fixed, but wording in the spec was not corrected yet. Also, waiting
+for the compiler patches to stabilize. Philip suggested marking the issue as
+an indefinite referral and not a rejection (motivation behind it is performance
+not correctness). He asked Kito to be careful on how closure is communicated.
+Kito plans to keep it open for a long time to revisit it if needed. Craig
+shared that intrinsic code might expose performance issues. Overall, the
+opinion is that current implementation requires more testing cycles.
+** #455: Kito confirmed this PR is in good shape, might be ready to be merged.
+* Ana and Christopher shared warning about RVI meetings migrating to
+LFX tools and people should expect updated meeting invites.
+
+* Reminders for the next meetings:
+** Feb 13, 2025: Toolchains
+** Feb 27, 2025: psABI

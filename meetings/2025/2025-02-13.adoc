@@ -1,0 +1,114 @@
+= Minutes for February 13, 2025
+
+== Attendees
+
+ * Ana Pazos (Qualcomm)
+ * Christoph Müllner (VRULL)
+ * Jackson Huff (Individual)
+ * Andrei Stan (Technical University of Iasi, RO)
+ * Boul Garai (PhD Student@IISc)
+ * Chao-ying Fu (MIPS)
+ * Craig Blackmore (Embecosm)
+ * Hao Lin (Samsung)
+ * Isaac Chute (RISC-V)
+ * Jiawei (PLCT)
+ * Jordan Jerome (Bethrothed Ltd)
+ * Kai Cheng (Samsung)
+ * Liao ShiHua (Institute of Software Chinese Academy)
+ * Mark Zhuang (SpacemiT)
+ * Paul Kirth (Google)
+ * Paul Sherman (Individual)
+ * Petr Hosek (Google LLC)
+ * Philip Reames (Rivos)
+ * Sam Elliott (Qualcomm, Inc.)
+ * Simon Cook (Embecosm Ltd.)
+ * Tsukasa OI (?)
+ * Victor Lu (Individual)
+ * Ziang Wang (?)
+
+== Artifacts
+https://docs.google.com/presentation/d/1sWTmsXElP3rZhALMpUPP0ZwcNr4stBajYyZevMK6gqU/edit#slide=id.gb5f973ee2a_0_594[Slides]
+
+== Topics
+* Ana provided an overview of the Member Participation & Voting Rights. Each
+member should classify themselves as Observer/Participant/Voting Participant.
+One voter per org and per individual. If anyone has questions, please contact
+help@riscv.org.
+* Christoph provided an update on the psABI TG proposal to be a continuous TG
+effort presented to the TSC last year. The decision was to form a new psABI TG
+for each new release. Since there is planning for a release 2.0., we need to
+form a group again. Ana asked Christoph to make the proposal slides/text
+available for review and updates. We should review the updated proposal at the
+next psABI TG on Feb 27 and vote on it on the next Toolchain SIG meeting.
+Ana also to check with Rafael on the next TSC meeting we can join (the meeting
+on March 5th might be tight).
+* Jackson Huff gave an overview of Chatassembler which runs on Milk-V Duo S
+development board. The assembler generates code at runtime. Due to project time
+constraints, invoking binutils assembler on shell command line is too slow
+for the project. Jackson also highlighted text from the ASM Manual he feels
+it needs improvement, e.g., the opening sentence "I think it’s probably better
+to beef up the binutils documentation rather than duplicating it here.";
+the far branches example.
+* Christoph thanked Jackson for his presentation and for his interesting
+project and acknowledged there are parts of the Manual that should be updated
+and shared that he welcomes new PRs to fix them.
+* Paul Sherman expressed two thoughts on the chat and voiced them over:
+"That's a very interesting application, Jackson. Two thoughts:
+First, perhaps to remove some of the overhead, maybe we can make GNU-as
+somewhat less generic and, thus, somewhat more specific only to RISC-V,
+thus faster.  Often, overhead and latency is the price paid for commonality
+and being generic.
+Second, how much would a Just-in-time solution, code creation and execution on
+the fly, fit the role, things already like in Extension J? Or example, with an
+installation of the toolchain on a MS Windows machine as
+"C:\riscv64-unknown-elf\bin" the assembler command riscv64-unknown-elf-as.exe
+is a compiled binary, which probably invokes many other binaries of libraries
+and executables in the package." In summary, Paul highlighted that an alternative
+is to build a GNU assembler version more specific to RISC-V, removing the support
+for every other ISA, which should improve its speed.
+* Philip Reames shared
+https://github.com/iximeow/yaxpeax-arch[a link of possible interest]
+and remarked on chat that "Time wise, this topic seems a bit off topic for this group.
+Can we move forward with the agenda".
+* Tsukasa OI shared in the chat that "There's libopcodes to use (GNU)
+disassembler but assembler... I don't think there's no pure library." Also
+commented on that LLVM as a library makes it really big for embedded.
+* Ana reiterated that issues can be raised for the ASM Manual and PRs are welcome.
+* Jackson acknowledged everyone's inputs.
+* Ana provided the background on "Create Release" requests (2 so far) to
+create release of the documents. Discussion on what classifies as specification and
+documentation that needs or does not need ratification. Christoph confirmed that
+we can name the SIG's documents as pre-release, they are community documents
+that do not require ratification process and build date can be used for naming.
+* Meeting proceeded with a review of Toolchain Conventions open PRs/Issues:
+** #73, #72, #70. #69, #63, #68.
+** Philip Reames provided overview of #72 and the concern with the prefix rv
+causing confusion with standard extensions instructions and RV acronym for RISC-V.
+He also shared he has alternatives in mind if people reject this prefix, like rvs.
+** Paul Sherman shared it is confusingly similar with RVI and whether RV should
+be a reserved term? RV can be confused with RISC-V International org.
+** Jackson Huffman shared he found the acronym confusing for new people.
+** Christoph decided to let LLVM and GNU communities decide about it. He
+shared we cannot mandate what some company wants to use as acronym.
+* Meeting proceeded with a review of C-API open PRs/Issues:
+** #102, #101, #93, #79, #76, #68, #96, #88
+* Meeting proceeded with a review of ASM Manual open PRs/Issues:
+** Sam provided updates to #122, PR title has been updated to reflect new
+feature name.
+* Meeting proceeded with a review of activities in riscv-gnu-toolchain
+** Bump DejaGnu (to fix a submodule issue)
+** Issue with shallow clones of submodules
+* Meeting proceed with Open floor questions:
+** Victor Lu posted a question on the chat and then voiced it over:
+"Does this group cover SPIR- V or other IR as a directly supported IR?"
+He shared a https://arxiv.org/pdf/2109.00673[related paper].
+** Christoph directed him to Vector SIG and explained this SIG does not handle
+GPUs.
+** Jiawei (PCLT) brought up RISC-V Profilers format, Christoph shared that
+patches have gone into LLVM and GCC.
+* Reminders for the next meetings:
+** Feb 27, 2025: psABI
+** Mar 13, 2025: Toolchains (TBD)
+** Mar 27, 2025: psABI
+** April 10, 2025: Toolchains
+** April 24, 2025: psABI
